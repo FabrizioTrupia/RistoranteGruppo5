@@ -2,6 +2,8 @@ Ristorante Gruppo 5
 
 Menu: Tipo Carne
 
+Antipasto: tagliere di salumi;
+
 Primo piatto: Spaghetti alla carbonara;
 
 
