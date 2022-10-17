@@ -9,3 +9,5 @@ Primo piatto: Spaghetti alla carbonara;
 
 
 Bevande: Acqua, Vino, Birra, Coca Cola.
+Dessert: Torta di fragole, sorbetto all' arancia;
+
