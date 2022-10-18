@@ -13,9 +13,9 @@ public class Main {
 
 
         System.out.println("BEVANDE");
-        Menu drink1 = new Menu("Bevanda:" , "Vino" , "12 euro");
-        Menu drink2 = new Menu("Bevanda:" , "Acqua" , "2 euro");
-        Menu drink3 = new Menu("Bevanda:" , "Birra" , "4 euro");
+        Drink drink1 = new Drink("Bevanda:" , "Vino" , "12 euro");
+        Drink drink2 = new Drink("Bevanda:" , "Acqua" , "2 euro");
+        Drink drink3 = new Drink("Bevanda:" , "Birra" , "4 euro");
 
         System.out.println(drink1);
         System.out.println(drink2);
