@@ -36,6 +36,10 @@ public class Main {
         System.out.println(drink3);
 
 
-
+        System.out.println("DESSERTS");
+        Menu dessert1 = new Menu("Dessert", "Torta di fragole", "8 euro");
+        Menu dessert2 = new Menu("Dessert", "Sorbetto all' arancia", "3 euro");
+        System.out.println(dessert1);
+        System.out.println(dessert2);
     }
 }
