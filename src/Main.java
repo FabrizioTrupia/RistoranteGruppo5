@@ -2,10 +2,9 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("ANTIPASTI");
-        Antipasto antipasto1 = new Antipasto("Antipasto:" , "Tartare di carne" , "8 euro");
-        Antipasto antipasto2 = new Antipasto("Antipasto:" , "Tagliere di salumi" , "10 euro");
-        Antipasto antipasto3 = new Antipasto("Antipasto:" , "Rusticini allo spiedo" , "6 euro");
-
+        Menu antipasto1 = new Menu("Antipasto:" , "Tartare di carne" , "8 euro");
+        Menu antipasto2 = new Menu("Antipasto:" , "Tagliere di salumi" , "10 euro");
+        Menu antipasto3 = new Menu("Antipasto:" , "Rusticini allo spiedo" , "6 euro");
         System.out.println(antipasto1);
         System.out.println(antipasto2);
         System.out.println(antipasto3);
