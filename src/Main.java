@@ -1,18 +1,29 @@
 public class Main {
     public static void main(String[] args) {
 
-        Menu menu = new Menu("ristorante 5 menu", "PIPPO");
+        Menu menu = new Menu("Ristorante a base di carne", "Team 5" , 2);
 
-        System.out.println("ANTIPASTI");
-        Portata antipasto1 = new Antipasti("Antipasto:" , 8);
-        Portata primoPiatto = new PrimiPiatti("spaghetti alla carbonara",13);
-        Portata secondoPiatto = new SecondiPiatti("spaghetti alla carbonara",13);
-        Portata dessert = new Desser("torta di ciliege",13);
 
-        menu.addPortata(antipasto1);
-        menu.addPortata(primoPiatto);
-        menu.addPortata(secondoPiatto);
-        menu.addPortata(dessert);
+
+        Portata secondoPiatto1 = new SecondiPiatti(EnumType.secondiPiatti , "fiorentina" , 15);
+        Portata secondoPiatto2 = new SecondiPiatti(EnumType.secondiPiatti , "involtini di carne" , 8);
+        Portata secondoPiatto3 = new SecondiPiatti(EnumType.secondiPiatti , "cotoletta di pollo" , 7);
+
+        menu.addPortata(secondoPiatto1);
+        menu.addPortata(secondoPiatto2);
+        menu.addPortata(secondoPiatto3);
+
+
+
+        Drink drink1 = new Drink(EnumType.drink , "Acqua" , 1);
+        Drink drink2 = new Drink(EnumType.drink , "Vino" , 4);
+        Drink drink3 = new Drink(EnumType.drink , "Birra" , 3);
+
+        menu.addDrink(drink1);
+        menu.addDrink(drink2);
+        menu.addDrink(drink3);
+
+
 
         menu.stampaMenu();
         menu.piattoDelGiorno();

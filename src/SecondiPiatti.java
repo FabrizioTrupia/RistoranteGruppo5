@@ -1,7 +1,7 @@
 public class SecondiPiatti extends Portata{
 
-    public SecondiPiatti(String name, int price) {
-        super(name, price);
-    }
 
+    public SecondiPiatti(EnumType type, String name, int price) {
+        super(type, name, price);
+    }
 }

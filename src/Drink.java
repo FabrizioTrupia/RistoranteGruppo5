@@ -1,10 +1,10 @@
-public class Portata {
+public class Drink {
 
     public EnumType type;
     public String name;
     public int price;
 
-    public Portata(EnumType type, String name,int price){
+    public Drink(EnumType type, String name,int price){
         this.type = type;
         this.name = name;
         this.price = price;
@@ -12,9 +12,8 @@ public class Portata {
 
     @Override
     public String toString() {
-        return "Portata: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro";
+        return "Bibita: " + type + " , Nome della bevanda: " + name + " , Prezzo: " + price + " euro";
     }
-
 
 
 }
