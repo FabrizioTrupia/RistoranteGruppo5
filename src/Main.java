@@ -23,6 +23,13 @@ public class Main {
         menu.addPortata(secondoPiatto2);
         menu.addPortata(secondoPiatto3);
 
+        Portata dessert1 = new Dessert(EnumType.dessert, "tortini ripieni", 3);
+        Portata dessert2 = new Dessert(EnumType.dessert, "torta di ciliege", 9);
+        Portata dessert3 = new Dessert(EnumType.dessert, "crostata di mele", 6);
+
+        menu.addPortata(dessert1);
+        menu.addPortata(dessert2);
+        menu.addPortata(dessert3);
 
 
         Drink drink1 = new Drink(EnumType.drink , "Acqua" , 1);
