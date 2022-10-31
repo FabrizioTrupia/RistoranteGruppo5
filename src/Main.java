@@ -19,8 +19,6 @@ public class Main {
         menu.addPortata(primoPiatto2);
         menu.addPortata(primoPiatto3);
 
-
-
         Portata secondoPiatto1 = new SecondiPiatti(EnumType.secondiPiatti , "fiorentina" , 15);
         Portata secondoPiatto2 = new SecondiPiatti(EnumType.secondiPiatti , "involtini di carne" , 8);
         Portata secondoPiatto3 = new SecondiPiatti(EnumType.secondiPiatti , "cotoletta di pollo" , 7);
@@ -37,7 +35,6 @@ public class Main {
         menu.addPortata(dessert2);
         menu.addPortata(dessert3);
 
-
         Drink drink1 = new Drink(EnumType.drink , "Acqua" , 1);
         Drink drink2 = new Drink(EnumType.drink , "Vino" , 4);
         Drink drink3 = new Drink(EnumType.drink , "Birra" , 3);
@@ -46,9 +43,8 @@ public class Main {
         menu.addDrink(drink2);
         menu.addDrink(drink3);
 
-
-
         menu.stampaMenu();
+        System.out.println("---------------------------------------------------------------------------------");
         menu.piattoDelGiorno();
 
     }
