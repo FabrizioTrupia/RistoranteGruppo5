@@ -38,12 +38,10 @@ public class Menu {
     }
 
     public void stampaMenu() {
-        for (int i = 0; i <= portataList.size() -1; i++){
-            System.out.println(portataList.get(i));
-        }
-        for (int i = 0; i <= drinkList.size() -1; i++){
-            System.out.println(drinkList.get(i));
-        }
+        portataList.forEach(System.out::println);
+
+        drinkList.forEach(System.out::println);
+
     }
 
     public void piattoDelGiorno() {
