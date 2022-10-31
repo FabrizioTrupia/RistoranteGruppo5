@@ -3,7 +3,13 @@ public class Main {
 
         Menu menu = new Menu("Ristorante a base di carne", "Team 5" , 2);
 
+        Portata antipasto1 = new Antipasti(EnumType.antipasti, "tagliere di salumi" , 8);
+        Portata antipasto2 = new Antipasti(EnumType.antipasti, "rustici di carne" , 6);
+        Portata antipasto3 = new Antipasti(EnumType.antipasti, "tartare di manzo", 8);
 
+        menu.addPortata(antipasto1);
+        menu.addPortata(antipasto2);
+        menu.addPortata(antipasto3);
 
         Portata primoPiatto1 = new PrimiPiatti(EnumType.primiPiatti, "Spaghetti alla carbonara", 11);
         Portata primoPiatto2 = new PrimiPiatti(EnumType.primiPiatti, "Rigatoni alla bolognese", 13);
