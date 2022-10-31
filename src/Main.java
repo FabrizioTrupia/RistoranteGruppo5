@@ -5,6 +5,16 @@ public class Main {
 
 
 
+        Portata primoPiatto1 = new PrimiPiatti(EnumType.primiPiatti, "Spaghetti alla carbonara", 11);
+        Portata primoPiatto2 = new PrimiPiatti(EnumType.primiPiatti, "Rigatoni alla bolognese", 13);
+        Portata primoPiatto3 = new PrimiPiatti(EnumType.primiPiatti, "Fettuccine panna e funghi", 10);
+
+        menu.addPortata(primoPiatto1);
+        menu.addPortata(primoPiatto2);
+        menu.addPortata(primoPiatto3);
+
+
+
         Portata secondoPiatto1 = new SecondiPiatti(EnumType.secondiPiatti , "fiorentina" , 15);
         Portata secondoPiatto2 = new SecondiPiatti(EnumType.secondiPiatti , "involtini di carne" , 8);
         Portata secondoPiatto3 = new SecondiPiatti(EnumType.secondiPiatti , "cotoletta di pollo" , 7);
