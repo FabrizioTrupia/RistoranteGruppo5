@@ -1,4 +1,7 @@
 /**
+ * In questa classe sono stati creati delle istanze di oggetti nelle varie classi e aggiunti alla lista
+ *  con il metodo stampaMenu viene stampato il menu
+ *  con il metodo piatto del giorno viene stampato un piatto randomico
  * La classe che fa riferimento al main
  * @author Fabrizio Trupia , Alessandro Trupia , Nicola Boniello , Andrea Sciscioli
  * @version 1
