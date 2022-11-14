@@ -19,7 +19,7 @@ public class Drink {
     /**
      * prezzo della bevanda
      */
-    public int price;
+    public Integer price;
 
     /**
      * Metodo costruttore della classe Drink
@@ -27,7 +27,7 @@ public class Drink {
      * @param name --> nome della bevanda
      * @param price --> prezzo della bevanda
      */
-    public Drink(String type, String name,int price){
+    public Drink(String type, String name,Integer price){
         this.type = type;
         this.name = name;
         this.price = price;

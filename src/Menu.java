@@ -22,7 +22,7 @@ public class Menu {
     /**
      * costo del coperto
      */
-    public int coperto;
+    public Integer coperto;
 
     /**
      * Lista delle portate
@@ -40,7 +40,7 @@ public class Menu {
      * @param name --> nome del ristorante
      * @param coperto --> prezzo del coperto
      */
-    public Menu(String type, String name , int coperto){
+    public Menu(String type, String name , Integer coperto){
         this.type = type;
         this.name = name;
         this.coperto = coperto;

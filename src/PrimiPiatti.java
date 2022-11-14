@@ -12,7 +12,7 @@ public class PrimiPiatti extends Portata{
      * @param price --> prezzo della portata
      */
 
-    public PrimiPiatti(String type, String name, int price) {
+    public PrimiPiatti(String type, String name, Integer price) {
         super(type, name, price);
     }
 }

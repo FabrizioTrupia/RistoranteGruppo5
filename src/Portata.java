@@ -19,7 +19,7 @@ public class Portata {
     /**
      * Prezzo del piatto
      */
-    public int price;
+    public Integer price;
 
     /**
      * Metodo costruttore della classe portata
@@ -27,7 +27,7 @@ public class Portata {
      * @param name --> nome del piatto
      * @param price --> prezzo del piatto
      */
-    public Portata(String type, String name,int price){
+    public Portata(String type, String name,Integer price){
         this.type = type;
         this.name = name;
         this.price = price;
