@@ -11,7 +11,10 @@ public class Cliente {
         } else if (12 < age && age < 18){
             this.type = EnumTipoCliente.MINORENNE;
         } else this.type = EnumTipoCliente.ADULTO;
-        }
+    }
+    public void infoCliente(){
+        System.out.println(getCognome() + " anni: " + getAge() + "(Classe cliente:" + getType() + ")");
+    }
 
 
     public String getCognome() {
