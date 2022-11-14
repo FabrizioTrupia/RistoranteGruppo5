@@ -12,27 +12,27 @@ public class Menu {
     /**
      * Il tipo di menu
      */
-    public String type;
+    private String type;
 
     /**
      * Il nome del ristorante
      */
-    public String name;
+    private String name;
 
     /**
      * costo del coperto
      */
-    public Integer coperto;
+    private Integer coperto;
 
     /**
      * Lista delle portate
      */
-    public List<Portata> portataList = new ArrayList<>();
+    private List<Portata> portataList = new ArrayList<>();
 
     /**
      * Lista delle bevande
      */
-    public List<Drink> drinkList = new ArrayList<>();
+    private List<Drink> drinkList = new ArrayList<>();
 
     /**
      * Il costruttore del menu
@@ -99,5 +99,43 @@ public class Menu {
     }
 
 
+    public String getType() {
+        return type;
+    }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getCoperto() {
+        return coperto;
+    }
+
+    public void setCoperto(Integer coperto) {
+        this.coperto = coperto;
+    }
+
+    public List<Portata> getPortataList() {
+        return portataList;
+    }
+
+    public void setPortataList(List<Portata> portataList) {
+        this.portataList = portataList;
+    }
+
+    public List<Drink> getDrinkList() {
+        return drinkList;
+    }
+
+    public void setDrinkList(List<Drink> drinkList) {
+        this.drinkList = drinkList;
+    }
 }

@@ -9,17 +9,17 @@ public class Portata {
     /**
      * Tipo della portata
      */
-    public String type;
+    private String type;
 
     /**
      * Nome del piatto
      */
-    public String name;
+    private String name;
 
     /**
      * Prezzo del piatto
      */
-    public Integer price;
+    private Integer price;
 
     /**
      * Metodo costruttore della classe portata
@@ -42,4 +42,27 @@ public class Portata {
         return "Portata: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro";
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
 }
