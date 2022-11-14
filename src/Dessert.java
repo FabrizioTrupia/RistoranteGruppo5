@@ -9,7 +9,7 @@ public class Dessert extends Portata{
      * @param name --> nome della portata Dessert
      * @param price --> prezzo della portata Dessert
      */
-    public Dessert(String type, String name, Integer price) {
+    public Dessert(String type, String name, int price) {
         super(type, name, price);
     }
 }
