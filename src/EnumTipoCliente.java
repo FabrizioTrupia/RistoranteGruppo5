@@ -1,15 +1,19 @@
 public enum EnumTipoCliente {
-    ADULTO,
-    MINORENNE,
-    BAMBINI;
+    ADULTO(false, false, true),
+    MINORENNE(false, true, false),
+    BAMBINI(true, false, false);
 
-    Integer age;
-    final public boolean isOverHeighteen = age > 18;
-    final public boolean isTeenage
 
-    EnumTipoCliente(){
+    final public boolean isOverHeighteen;
+    final public boolean isTeenage;
+    final public boolean isChild;
+
+    EnumTipoCliente(boolean isChild, boolean isTeenage, boolean isOverHeighteen){
+        this.isOverHeighteen = isOverHeighteen;
+        this.isTeenage = isTeenage;
+        this.isChild = isChild;
     }
-    EnumTipoCliente age;
+
 
 
 

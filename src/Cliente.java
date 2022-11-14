@@ -3,11 +3,16 @@ public class Cliente {
     private Integer age;
     private EnumTipoCliente type;
 
-    public Cliente(String cognome, Integer age, EnumTipoCliente type  ){
+    public Cliente(String cognome, Integer age){
         this.cognome = cognome;
         this.age = age;
-        this.type = type;
-    }
+        if (0 < age && age < 12){
+        this.type = EnumTipoCliente.BAMBINI;
+        } else if (12 < age && age < 18){
+            this.type = EnumTipoCliente.MINORENNE;
+        } else this.type = EnumTipoCliente.ADULTO;
+        }
+
 
     public String getCognome() {
         return cognome;
