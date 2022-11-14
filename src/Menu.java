@@ -36,11 +36,12 @@ public class Menu {
 
     /**
      * Il costruttore del menu
-     * @param type --> menu
-     * @param name --> nome del ristorante
+     *
+     * @param type    --> menu
+     * @param name    --> nome del ristorante
      * @param coperto --> prezzo del coperto
      */
-    public Menu(String type, String name , Integer coperto){
+    public Menu(String type, String name, Integer coperto) {
         this.type = type;
         this.name = name;
         this.coperto = coperto;
@@ -48,6 +49,7 @@ public class Menu {
 
     /**
      * Metodo to string della classe menu
+     *
      * @return i parametri: type , name, coperto della classe menu
      */
 
@@ -58,25 +60,28 @@ public class Menu {
 
     /**
      * Un metodo che aggiunge le portate all lista "portataList"
+     *
      * @param portata --> parametro che richiama la classe Portata
      */
-    public void addPortata(Portata portata){
+    public void addPortata(Portata portata) {
         portataList.add(portata);
     }
 
     /**
      * Un metodo che aggiunge i drink all lista "drinkList"
+     *
      * @param drink --> parametro che richiama la classe Drink
      */
-    public void addDrink(Drink drink){
+    public void addDrink(Drink drink) {
         drinkList.add(drink);
     }
 
     /**
      * Metodo che rimuove una portata dalla lista "portataList"
+     *
      * @param portata --> parametro che richiama la classe Portata
      */
-    public void removePortata(Portata portata){
+    public void removePortata(Portata portata) {
 
         portataList.remove(portata);
     }
@@ -89,13 +94,21 @@ public class Menu {
         drinkList.forEach(System.out::println);
     }
 
-    /**
-     * Un metodo che suggerisce un piatto del giorno casuale
-     */
-    public void piattoDelGiorno() {
-        Random random = new Random();
-        System.out.println("piatto del giorno: " +
-                portataList.get( random.nextInt(portataList.size())));
+    public void stampaPiattoDelGiorno() {
+        for (Portata piattoDelGiorno : portataList) {
+            if (piattoDelGiorno.isPiattoDelGiorno()) {
+                System.out.println("Piatto del giorno raccomandato: " + piattoDelGiorno.getType() + " = " + piattoDelGiorno.getName() + " - " + piattoDelGiorno.getPrice() + " euro ");
+            }
+        }
+
+    }
+
+    public void stampaBevandaDelGiorno(){
+        for (Drink drinkDelGiorno:drinkList) {
+            if (drinkDelGiorno.isDrinkDelGiorno()) {
+                System.out.println("Bevanda del giorno raccomandata: " + drinkDelGiorno.getType() + " = " + drinkDelGiorno.getName() + " - " + drinkDelGiorno.getPrice() + " euro ");
+            }
+        }
     }
 
 
@@ -138,4 +151,5 @@ public class Menu {
     public void setDrinkList(List<Drink> drinkList) {
         this.drinkList = drinkList;
     }
+
 }

@@ -21,16 +21,19 @@ public class Portata {
      */
     private Integer price;
 
+    public boolean piattoDelGiorno;
+
     /**
      * Metodo costruttore della classe portata
      * @param type --> tipo della portata
      * @param name --> nome del piatto
      * @param price --> prezzo del piatto
      */
-    public Portata(String type, String name,Integer price){
+    public Portata(String type, String name,Integer price, boolean piattoDelGiorno){
         this.type = type;
         this.name = name;
         this.price = price;
+        this.piattoDelGiorno=piattoDelGiorno;
     }
 
     /**
@@ -40,6 +43,10 @@ public class Portata {
     @Override
     public String toString() {
         return "Portata: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro";
+    }
+
+    public boolean isPiattoDelGiorno(){
+        return piattoDelGiorno;
     }
 
     public String getType() {

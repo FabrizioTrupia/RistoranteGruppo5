@@ -11,8 +11,8 @@ public class SecondiPiatti extends Portata{
      * @param name --> nome del piatto
      * @param price --> prezzo del piatto
      */
-    public SecondiPiatti(String type, String name, Integer price) {
+    public SecondiPiatti(String type, String name, Integer price, boolean piattoDelGiorno) {
 
-        super(type, name, price);
+        super(type, name, price, piattoDelGiorno);
     }
 }

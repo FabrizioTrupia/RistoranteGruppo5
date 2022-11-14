@@ -21,16 +21,19 @@ public class Drink {
      */
     private Integer price;
 
+    public boolean drinkDelGiorno;
+
     /**
      * Metodo costruttore della classe Drink
      * @param type --> tipo: "Bevanda"
      * @param name --> nome della bevanda
      * @param price --> prezzo della bevanda
      */
-    public Drink(String type, String name,Integer price){
+    public Drink(String type, String name,Integer price, boolean drinkDelGiorno){
         this.type = type;
         this.name = name;
         this.price = price;
+        this.drinkDelGiorno = drinkDelGiorno;
     }
 
     /**
@@ -64,5 +67,9 @@ public class Drink {
 
     public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public boolean isDrinkDelGiorno(){
+        return drinkDelGiorno;
     }
 }
