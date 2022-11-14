@@ -56,7 +56,5 @@ public class Main {
         System.out.println("---------------------------------------------------------------------------------");
         menu.piattoDelGiorno();
 
-
-
     }
 }
