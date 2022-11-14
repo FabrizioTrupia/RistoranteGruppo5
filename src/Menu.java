@@ -94,6 +94,9 @@ public class Menu {
         drinkList.forEach(System.out::println);
     }
 
+    /**
+     * un metodo per stampare il piatto del giorno e le relative informazioni del piatto
+     */
     public void stampaPiattoDelGiorno() {
         for (Portata piattoDelGiorno : portataList) {
             if (piattoDelGiorno.isPiattoDelGiorno()) {
@@ -102,6 +105,10 @@ public class Menu {
         }
 
     }
+
+    /**
+     * un metodo per stampare la bevanda del giorno e le relative informazioni sulla bevanda
+     */
 
     public void stampaBevandaDelGiorno(){
         for (Drink drinkDelGiorno:drinkList) {

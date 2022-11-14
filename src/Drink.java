@@ -21,13 +21,18 @@ public class Drink {
      */
     private Integer price;
 
+    /**
+     * possibilità di indicare se una bevenda è del giorno o meno
+     */
     public boolean drinkDelGiorno;
+
 
     /**
      * Metodo costruttore della classe Drink
      * @param type --> tipo: "Bevanda"
      * @param name --> nome della bevanda
      * @param price --> prezzo della bevanda
+     * @param drinkDelGiorno --> drink del giorno
      */
     public Drink(String type, String name,Integer price, boolean drinkDelGiorno){
         this.type = type;

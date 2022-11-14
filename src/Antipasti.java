@@ -9,6 +9,7 @@ public class Antipasti extends Portata{
      * @param type --> tipo della portata Antipasti
      * @param name --> nome della portata Antipasti
      * @param price --> prezzo della portata Antipasti
+     * @param piattoDelGiorno --> piatto del giorno
      */
     public Antipasti(String type, String name, Integer price, boolean piattoDelGiorno) {
         super(type, name, price,piattoDelGiorno);

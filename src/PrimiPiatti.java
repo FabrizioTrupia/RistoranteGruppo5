@@ -10,6 +10,7 @@ public class PrimiPiatti extends Portata{
      * @param type --> tipo della portata
      * @param name --> nome della portata
      * @param price --> prezzo della portata
+     * @param piattoDelGiorno --> piatto del giorno
      */
 
     public PrimiPiatti(String type, String name, Integer price, boolean piattoDelGiorno) {

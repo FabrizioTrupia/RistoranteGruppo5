@@ -21,6 +21,10 @@ public class Portata {
      */
     private Integer price;
 
+    /**
+     * possibilità di indicare se un piatto è del giorno o meno
+     */
+
     public boolean piattoDelGiorno;
 
     /**
@@ -28,6 +32,7 @@ public class Portata {
      * @param type --> tipo della portata
      * @param name --> nome del piatto
      * @param price --> prezzo del piatto
+     * @param piattoDelGiorno --> piatto del giorno
      */
     public Portata(String type, String name,Integer price, boolean piattoDelGiorno){
         this.type = type;
