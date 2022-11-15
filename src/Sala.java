@@ -2,36 +2,36 @@ import java.util.ArrayList;
 
 public class Sala {
 
-    private int tavoliOccupati;
+    private Integer tavoliOccupati;
 
-    private ArrayList<Cliente> tavoli = new ArrayList<>();
+    private ArrayList<Prenotazione> tavoli = new ArrayList<>();
 
-    public void setTavoli(ArrayList<Cliente> tavoli) {
+    public void setTavoli(ArrayList<Prenotazione> tavoli) {
         this.tavoli = tavoli;
     }
 
-    public ArrayList<Cliente> getTavoli() {
+    public ArrayList<Prenotazione> getTavoli() {
         return tavoli;
     }
 
-    public int getPostiOccupati() {
+    public Integer getPostiOccupati() {
         return tavoliOccupati;
     }
 
-    public void setTavoliOccupati(int tavoliOccupati) {
+    public void setTavoliOccupati(Integer tavoliOccupati) {
         this.tavoliOccupati = tavoliOccupati;
     }
 
-    public void aggiungiPrenotazione (Cliente cliente){
+    public void aggiungiPrenotazione (Prenotazione prenotazione){
         if (tavoliOccupati < 100){
-            tavoli.add(cliente);
+            tavoli.add(prenotazione);
             tavoliOccupati++;
         } else System.out.println("Tutti i tavoli sono occupati");
     }
 
-    public Cliente rimuoviPrenotazione(int Cliente){
+    public void rimuoviPrenotazione(int prenotazione){
         System.out.println("Il tavolo " + tavoli + " è disponibile per prenotazioni");
-        return tavoli.remove(Cliente);
+        tavoli.remove(prenotazione);
     }
 }
 
