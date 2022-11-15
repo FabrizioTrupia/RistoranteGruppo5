@@ -1,3 +1,5 @@
+package Ristorante.Consumatore;
+
 public class Cliente {
     private String cognome;
     private Integer age;

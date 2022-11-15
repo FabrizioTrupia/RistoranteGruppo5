@@ -1,12 +1,16 @@
+package Ristorante.FoodAndDrink.EntPort;
+
+import Ristorante.FoodAndDrink.Portata;
+
 /**
- * La classe che fa riferimento ai PrimiPiatti che estende la classe Portata
+ * La classe che fa riferimento ai Ristorante.FoodAndDrink.EntPort.PrimiPiatti che estende la classe Ristorante.FoodAndDrink.Portata
  * @author Nicola boniello
  * @version 1
  */
-public class PrimiPiatti extends Portata{
+public class PrimiPiatti extends Portata {
 
     /**
-     * metodo costruttore della classe PrimiPiatti
+     * metodo costruttore della classe Ristorante.FoodAndDrink.EntPort.PrimiPiatti
      * @param type --> tipo della portata
      * @param name --> nome della portata
      * @param price --> prezzo della portata

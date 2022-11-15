@@ -1,10 +1,14 @@
+package Ristorante.FoodAndDrink.EntDrink;
+
+import Ristorante.FoodAndDrink.Drink;
+
 /**
  * La classe che fa riferimento alle bevande alcoliche che estende la classe Drink
  * @author Nicola boniello
  * @version 1
  */
 
-public class BevandaAlcolica extends Drink{
+public class BevandaAlcolica extends Drink {
     /**
      * Metodo costruttore della classe Drink
      *

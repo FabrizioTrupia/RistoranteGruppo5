@@ -1,3 +1,5 @@
+package Ristorante.FoodAndDrink;
+
 /**
  * La classe che fa riferimento alla portata
  * @author Fabrizio Trupia , Alessandro Trupia , Nicola Boniello , Andrea Sciscioli
@@ -47,7 +49,7 @@ public class Portata {
      */
     @Override
     public String toString() {
-        return "Portata: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro";
+        return "Ristorante.FoodAndDrink.Portata: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro";
     }
 
     public boolean isPiattoDelGiorno(){
