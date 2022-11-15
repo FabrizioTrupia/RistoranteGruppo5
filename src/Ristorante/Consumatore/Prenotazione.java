@@ -1,3 +1,7 @@
+package Ristorante.Consumatore;
+
+import Ristorante.Consumatore.Cliente;
+
 import java.util.ArrayList;
 
 public class Prenotazione {

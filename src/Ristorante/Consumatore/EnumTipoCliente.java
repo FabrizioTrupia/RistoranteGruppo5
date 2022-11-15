@@ -1,3 +1,5 @@
+package Ristorante.Consumatore;
+
 public enum EnumTipoCliente {
     ADULTO(false, false, true),
     MINORENNE(false, true, false),

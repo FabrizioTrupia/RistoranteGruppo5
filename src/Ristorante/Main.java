@@ -1,3 +1,13 @@
+package Ristorante;
+
+import Ristorante.FoodAndDrink.*;
+import Ristorante.FoodAndDrink.DrinEnti.BevandaAlcolica;
+import Ristorante.FoodAndDrink.DrinEnti.BevandaAnalcolica;
+import Ristorante.FoodAndDrink.PortEnti.Antipasti;
+import Ristorante.FoodAndDrink.PortEnti.Dessert;
+import Ristorante.FoodAndDrink.PortEnti.PrimiPiatti;
+import Ristorante.FoodAndDrink.PortEnti.SecondiPiatti;
+
 /**
  * In questa classe sono stati creati delle istanze di oggetti nelle varie classi e aggiunti alla lista
  *  con il metodo stampaMenu viene stampato il menu
@@ -36,9 +46,9 @@ public class Main {
         menu.addPortata(secondoPiatto2);
         menu.addPortata(secondoPiatto3);
 
-        Portata dessert1 = new Dessert("Dessert", "tortini ripieni", 3,false);
-        Portata dessert2 = new Dessert("Dessert", "torta di ciliege", 9,true);
-        Portata dessert3 = new Dessert("Dessert", "crostata di mele", 6,false);
+        Portata dessert1 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "tortini ripieni", 3,false);
+        Portata dessert2 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "torta di ciliege", 9,true);
+        Portata dessert3 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "crostata di mele", 6,false);
 
         menu.addPortata(dessert1);
         menu.addPortata(dessert2);

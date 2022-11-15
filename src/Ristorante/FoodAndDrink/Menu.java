@@ -1,6 +1,7 @@
+package Ristorante.FoodAndDrink;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * La classe che fa riferimento al menu
@@ -61,7 +62,7 @@ public class Menu {
     /**
      * Un metodo che aggiunge le portate all lista "portataList"
      *
-     * @param portata --> parametro che richiama la classe Portata
+     * @param portata --> parametro che richiama la classe Ristorante.FoodAndDrink.Portata
      */
     public void addPortata(Portata portata) {
         portataList.add(portata);
@@ -70,7 +71,7 @@ public class Menu {
     /**
      * Un metodo che aggiunge i drink all lista "drinkList"
      *
-     * @param drink --> parametro che richiama la classe Drink
+     * @param drink --> parametro che richiama la classe Ristorante.FoodAndDrink.Drink
      */
     public void addDrink(Drink drink) {
         drinkList.add(drink);
@@ -79,7 +80,7 @@ public class Menu {
     /**
      * Metodo che rimuove una portata dalla lista "portataList"
      *
-     * @param portata --> parametro che richiama la classe Portata
+     * @param portata --> parametro che richiama la classe Ristorante.FoodAndDrink.Portata
      */
     public void removePortata(Portata portata) {
 

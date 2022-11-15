@@ -1,5 +1,7 @@
+package Ristorante.FoodAndDrink;
+
 /**
- * La classe che fa riferimento ai Drink
+ * La classe che fa riferimento ai Ristorante.FoodAndDrink.Drink
  * @author Fabrizio Trupia
  * @version 1
  */
@@ -28,7 +30,7 @@ public class Drink {
 
 
     /**
-     * Metodo costruttore della classe Drink
+     * Metodo costruttore della classe Ristorante.FoodAndDrink.Drink
      * @param type --> tipo: "Bevanda"
      * @param name --> nome della bevanda
      * @param price --> prezzo della bevanda
@@ -42,7 +44,7 @@ public class Drink {
     }
 
     /**
-     * Metodo to string della classe Drink
+     * Metodo to string della classe Ristorante.FoodAndDrink.Drink
      * @return i parametri: type , name, price della classe drink
      */
     @Override

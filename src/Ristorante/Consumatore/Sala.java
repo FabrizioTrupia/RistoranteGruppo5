@@ -1,3 +1,7 @@
+package Ristorante.Consumatore;
+
+import Ristorante.Consumatore.Prenotazione;
+
 import java.util.ArrayList;
 
 public class Sala {
