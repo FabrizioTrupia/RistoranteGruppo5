@@ -1,10 +1,18 @@
 import java.util.ArrayList;
 
 public class Sala {
+    private Integer tavoliTotali;
 
     private Integer tavoliOccupati;
 
     private ArrayList<Prenotazione> tavoli = new ArrayList<>();
+
+    private Sala(Integer tavoliTotali){
+        this.tavoliTotali = tavoliTotali;
+    }
+    public Sala(){
+        if (Instance == null)
+    }
 
     public void setTavoli(ArrayList<Prenotazione> tavoli) {
         this.tavoli = tavoli;
@@ -23,9 +31,12 @@ public class Sala {
     }
 
     public void aggiungiPrenotazione (Prenotazione prenotazione){
-        if (tavoliOccupati < 100){
+        if (tavoliTotali - tavoliOccupati > prenotazione.tavoliDaOccupare){
             tavoli.add(prenotazione);
-            tavoliOccupati++;
+            tavoliOccupati += prenotazione.tavoliDaOccupare;
+            if (prenotazione.tavoliDaOccupare == 1) {
+                System.out.println("abbiamo prenotato un tavolo per voi");
+            } else System.out.println("abbiamo unito " + prenotazione.tavoliDaOccupare + "tavoli");
         } else System.out.println("Tutti i tavoli sono occupati");
     }
 
