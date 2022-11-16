@@ -22,33 +22,33 @@ public class Main {
 
         Menu menu = new Menu("Ristorante a base di carne", "Team 5" , 2);
 
-        Portata antipasto1 = new Antipasti("Antipasto", "tagliere di salumi" , 8,false);
-        Portata antipasto2 = new Antipasti("Antipasto", "rustici di carne" , 6,true);
-        Portata antipasto3 = new Antipasti("Antipasto", "tartare di manzo", 8,false);
+        Portata antipasto1 = new Antipasti("Antipasto", "tagliere di salumi" , 8,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata antipasto2 = new Antipasti("Antipasto", "rustici di carne" , 6,true, TypeMenuEnum.MENU_CLASSIC);
+        Portata antipasto3 = new Antipasti("Antipasto", "tartare di manzo", 8,false, TypeMenuEnum.MENU_CLASSIC);
 
         menu.addPortata(antipasto1);
         menu.addPortata(antipasto2);
         menu.addPortata(antipasto3);
 
-        Portata primoPiatto1 = new PrimiPiatti("Primo piatto", "Spaghetti alla carbonara", 11,true);
-        Portata primoPiatto2 = new PrimiPiatti("Primo piatto", "Rigatoni alla bolognese", 13,false);
-        Portata primoPiatto3 = new PrimiPiatti("Primo piatto", "Fettuccine panna e funghi", 10,false);
+        Portata primoPiatto1 = new PrimiPiatti("Primo piatto", "Spaghetti alla carbonara", 11,true, TypeMenuEnum.MENU_CLASSIC);
+        Portata primoPiatto2 = new PrimiPiatti("Primo piatto", "Rigatoni alla bolognese", 13,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata primoPiatto3 = new PrimiPiatti("Primo piatto", "Fettuccine panna e funghi", 10,false, TypeMenuEnum.MENU_CLASSIC);
 
         menu.addPortata(primoPiatto1);
         menu.addPortata(primoPiatto2);
         menu.addPortata(primoPiatto3);
 
-        Portata secondoPiatto1 = new SecondiPiatti("Secondo piatto" , "fiorentina" , 15,false);
-        Portata secondoPiatto2 = new SecondiPiatti("Secondo piatto" , "involtini di carne" , 8,false);
-        Portata secondoPiatto3 = new SecondiPiatti("Secondo piatto" , "cotoletta di pollo" , 7,true);
+        Portata secondoPiatto1 = new SecondiPiatti("Secondo piatto" , "fiorentina" , 15,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata secondoPiatto2 = new SecondiPiatti("Secondo piatto" , "involtini di carne" , 8,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata secondoPiatto3 = new SecondiPiatti("Secondo piatto" , "cotoletta di pollo" , 7,true, TypeMenuEnum.MENU_CLASSIC);
 
         menu.addPortata(secondoPiatto1);
         menu.addPortata(secondoPiatto2);
         menu.addPortata(secondoPiatto3);
 
-        Portata dessert1 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "tortini ripieni", 3,false);
-        Portata dessert2 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "torta di ciliege", 9,true);
-        Portata dessert3 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "crostata di mele", 6,false);
+        Portata dessert1 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "tortini ripieni", 3,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata dessert2 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "torta di ciliege", 9,true, TypeMenuEnum.MENU_CLASSIC);
+        Portata dessert3 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "crostata di mele", 6,false, TypeMenuEnum.MENU_CLASSIC);
 
         menu.addPortata(dessert1);
         menu.addPortata(dessert2);

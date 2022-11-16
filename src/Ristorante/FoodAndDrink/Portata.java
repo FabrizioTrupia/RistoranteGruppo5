@@ -29,6 +29,8 @@ public class Portata {
 
     public boolean piattoDelGiorno;
 
+    private TypeMenuEnum typeMenuEnum;
+
     /**
      * Metodo costruttore della classe portata
      * @param type --> tipo della portata
@@ -36,11 +38,12 @@ public class Portata {
      * @param price --> prezzo del piatto
      * @param piattoDelGiorno --> piatto del giorno
      */
-    public Portata(String type, String name,Integer price, boolean piattoDelGiorno){
+    public Portata(String type, String name,Integer price, boolean piattoDelGiorno, TypeMenuEnum typeMenuEnum){
         this.type = type;
         this.name = name;
         this.price = price;
         this.piattoDelGiorno=piattoDelGiorno;
+        this.typeMenuEnum=typeMenuEnum;
     }
 
     /**

@@ -1,6 +1,7 @@
 package Ristorante.FoodAndDrink.PortEnti;
 
 import Ristorante.FoodAndDrink.Portata;
+import Ristorante.FoodAndDrink.TypeMenuEnum;
 
 /**
  * La classe che fa riferimento ai Secondi piatti che estende la classe Ristorante.FoodAndDrink.Portata
@@ -16,8 +17,8 @@ public class SecondiPiatti extends Portata {
      * @param price --> prezzo del piatto
      * @param piattoDelGiorno  --> piatto del giorno
      */
-    public SecondiPiatti(String type, String name, Integer price, boolean piattoDelGiorno) {
+    public SecondiPiatti(String type, String name, Integer price, boolean piattoDelGiorno, TypeMenuEnum typeMenuEnum) {
 
-        super(type, name, price, piattoDelGiorno);
+        super(type, name, price, piattoDelGiorno, typeMenuEnum);
     }
 }

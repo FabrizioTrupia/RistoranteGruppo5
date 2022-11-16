@@ -14,9 +14,7 @@ public class Sala {
     private Sala(Integer tavoliTotali){
         this.tavoliTotali = tavoliTotali;
     }
-    public Sala(){
-        if (Instance == null)
-    }
+
 
     public void setTavoli(ArrayList<Prenotazione> tavoli) {
         this.tavoli = tavoli;
