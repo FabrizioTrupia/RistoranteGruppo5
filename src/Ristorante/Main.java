@@ -87,9 +87,9 @@ public class Main {
         menu.addPortata(secondoPiatto6);
         menu.addPortata(secondoPiatto7);
 
-        Portata dessert1 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "tortini ripieni", 3,false, TypeMenuEnum.MENU_CLASSIC);
-        Portata dessert2 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "torta di ciliege", 9,true, TypeMenuEnum.MENU_CLASSIC);
-        Portata dessert3 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "crostata di mele", 6,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata dessert1 = new Dessert("Dessert", "tortini ripieni", 3,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata dessert2 = new Dessert("Dessert", "torta di ciliege", 9,true, TypeMenuEnum.MENU_CLASSIC);
+        Portata dessert3 = new Dessert("Dessert", "crostata di mele", 6,false, TypeMenuEnum.MENU_CLASSIC);
 
         menu.addPortata(dessert1);
         menu.addPortata(dessert2);
