@@ -1,20 +1,28 @@
 package Ristorante.Consumatore;
 
+
+
 public class Cliente {
     private String cognome;
     private Integer age;
     private EnumTipoCliente type;
 
-    public Cliente(String cognome, Integer age){
+
+    private tipoGustiCliente gusti;
+
+    public Cliente(String cognome, Integer age, tipoGustiCliente gusti) {
         this.cognome = cognome;
         this.age = age;
-        if (0 < age && age < 12){
-        this.type = EnumTipoCliente.BAMBINI;
-        } else if (12 < age && age < 18){
+        if (0 < age && age < 12) {
+            this.type = EnumTipoCliente.BAMBINI;
+        } else if (12 < age && age < 18) {
             this.type = EnumTipoCliente.MINORENNE;
         } else this.type = EnumTipoCliente.ADULTO;
+        this.gusti = gusti;
     }
-    public void infoCliente(){
+
+
+    public void infoCliente() {
         System.out.println(getCognome() + " anni: " + getAge() + "(Classe cliente:" + getType() + ")");
     }
 
@@ -41,5 +49,13 @@ public class Cliente {
 
     public void setType(EnumTipoCliente type) {
         this.type = type;
+    }
+
+    public tipoGustiCliente getGusti() {
+        return gusti;
+    }
+
+    public void setGusti(tipoGustiCliente gusti) {
+        this.gusti = gusti;
     }
 }

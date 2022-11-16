@@ -1,5 +1,7 @@
 package Ristorante;
 
+import Ristorante.Consumatore.Cliente;
+import Ristorante.Consumatore.tipoGustiCliente;
 import Ristorante.FoodAndDrink.*;
 import Ristorante.FoodAndDrink.DrinEnti.BevandaAlcolica;
 import Ristorante.FoodAndDrink.DrinEnti.BevandaAnalcolica;
@@ -32,7 +34,7 @@ public class Main {
 
         Portata primoPiatto1 = new PrimiPiatti("Primo piatto", "Spaghetti alla carbonara", 11,true, TypeMenuEnum.MENU_CLASSIC);
         Portata primoPiatto2 = new PrimiPiatti("Primo piatto", "Rigatoni alla bolognese", 13,false, TypeMenuEnum.MENU_CLASSIC);
-        Portata primoPiatto3 = new PrimiPiatti("Primo piatto", "Fettuccine panna e funghi", 10,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata primoPiatto3 = new PrimiPiatti("Primo piatto", "Fettuccine panna e funghi", 10,false, TypeMenuEnum.MENU_VEGETARIAN);
 
         menu.addPortata(primoPiatto1);
         menu.addPortata(primoPiatto2);
@@ -74,6 +76,8 @@ public class Main {
         System.out.println("---------------------------------------------------------------------------------");
         menu.stampaPiattoDelGiorno();
         menu.stampaBevandaDelGiorno();
+
+
 
 
 

@@ -29,6 +29,9 @@ public class Portata {
 
     public boolean piattoDelGiorno;
 
+
+
+
     private TypeMenuEnum typeMenuEnum;
 
     /**
@@ -81,5 +84,12 @@ public class Portata {
 
     public void setPrice(Integer price) {
         this.price = price;
+    }
+    public TypeMenuEnum getTypeMenuEnum() {
+        return typeMenuEnum;
+    }
+
+    public void setTypeMenuEnum(TypeMenuEnum typeMenuEnum) {
+        this.typeMenuEnum = typeMenuEnum;
     }
 }

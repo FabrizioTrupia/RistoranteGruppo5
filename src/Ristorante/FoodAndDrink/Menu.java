@@ -1,5 +1,8 @@
 package Ristorante.FoodAndDrink;
 
+import Ristorante.Consumatore.Cliente;
+import Ristorante.Consumatore.tipoGustiCliente;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -104,7 +107,6 @@ public class Menu {
                 System.out.println("Piatto del giorno raccomandato: " + piattoDelGiorno.getType() + " = " + piattoDelGiorno.getName() + " - " + piattoDelGiorno.getPrice() + " euro ");
             }
         }
-
     }
 
     /**
@@ -118,8 +120,31 @@ public class Menu {
             }
         }
     }
-
-
+    public void piattoConsigliato(Cliente cliente){
+        for(Portata portata : portataList){
+            switch (cliente.getGusti()){
+                case VEGANO -> {
+                    if (portata.getTypeMenuEnum() == TypeMenuEnum.MENU_VEGAN) {
+                        System.out.println(portata.toString());
+                    }
+                    break;
+                }
+                case VEGETARIANO ->  {
+                    if (portata.getTypeMenuEnum() == TypeMenuEnum.MENU_VEGETARIAN) {
+                        System.out.println(portata.toString());
+                    }
+                    break;
+                }
+                case CLASSICO -> {
+                    if (portata.getTypeMenuEnum() == TypeMenuEnum.MENU_CLASSIC) {
+                        System.out.println(portata.toString());
+                    }
+                    break;
+                }
+                default -> System.out.println("Mi dica che genere di piatti desidera");
+            }
+        }
+    }
     public String getType() {
         return type;
     }
