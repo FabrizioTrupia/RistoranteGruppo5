@@ -44,6 +44,7 @@ public class Sala {
 
     public void rimuoviPrenotazione(int prenotazione){
         System.out.println("Il tavolo " + tavoli + " è disponibile per prenotazioni");
+        tavoliOccupati -= tavoli.get(prenotazione).tavoliDaOccupare;
         tavoli.remove(prenotazione);
     }
 }
