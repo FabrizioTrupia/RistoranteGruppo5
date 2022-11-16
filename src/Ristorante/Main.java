@@ -24,29 +24,68 @@ public class Main {
 
         Menu menu = new Menu("Ristorante a base di carne", "Team 5" , 2);
 
-        Portata antipasto1 = new Antipasti("Antipasto", "tagliere di salumi" , 8,false, TypeMenuEnum.MENU_CLASSIC);
-        Portata antipasto2 = new Antipasti("Antipasto", "rustici di carne" , 6,true, TypeMenuEnum.MENU_CLASSIC);
-        Portata antipasto3 = new Antipasti("Antipasto", "tartare di manzo", 8,false, TypeMenuEnum.MENU_CLASSIC);
+        //Antipasti classici
+        Portata antipasto1 = new Antipasti("Antipasto", "Tagliere di salumi" , 8,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata antipasto2 = new Antipasti("Antipasto", "Rustici di carne" , 6,true, TypeMenuEnum.MENU_CLASSIC);
+        Portata antipasto3 = new Antipasti("Antipasto", "Tartare di manzo", 8,false, TypeMenuEnum.MENU_CLASSIC);
+
+        //Antipasti vegani
+        Portata antipasto4 = new Antipasti("Antipasto", "Tartare di zucchine e tartufo", 8,false, TypeMenuEnum.MENU_VEGAN);
+        Portata antipasto5 = new Antipasti("Antipasto", "Toast con Avocado e melanzane", 8,false, TypeMenuEnum.MENU_VEGAN);
+
+        //Antipasti vegetariani
+        Portata antipasto6 = new Antipasti("Antipasto", "Bruschette con pomodoro", 8,false, TypeMenuEnum.MENU_VEGETARIAN);
+        Portata antipasto7 = new Antipasti("Antipasto", "Grigliata di verdura mista", 8,false, TypeMenuEnum.MENU_VEGETARIAN);
 
         menu.addPortata(antipasto1);
         menu.addPortata(antipasto2);
         menu.addPortata(antipasto3);
+        menu.addPortata(antipasto4);
+        menu.addPortata(antipasto5);
+        menu.addPortata(antipasto6);
+        menu.addPortata(antipasto7);
 
+        //Primi piatti classici
         Portata primoPiatto1 = new PrimiPiatti("Primo piatto", "Spaghetti alla carbonara", 11,true, TypeMenuEnum.MENU_CLASSIC);
-        Portata primoPiatto2 = new PrimiPiatti("Primo piatto", "Rigatoni alla bolognese", 13,false, TypeMenuEnum.MENU_CLASSIC);
-        Portata primoPiatto3 = new PrimiPiatti("Primo piatto", "Fettuccine panna e funghi", 10,false, TypeMenuEnum.MENU_VEGETARIAN);
+        Portata primoPiatto2 = new PrimiPiatti("Primo piatto", "Rigatoni alla bolognese", 9,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata primoPiatto3 = new PrimiPiatti("Primo piatto", "Tortiglioni salsiccia e cipolla", 8,false, TypeMenuEnum.MENU_CLASSIC);
+
+        //Primi piatti vegani
+        Portata primoPiatto4 = new PrimiPiatti("Primo piatto", "Linguine pompelmo e pistacchio", 12,false, TypeMenuEnum.MENU_VEGAN);
+        Portata primoPiatto5 = new PrimiPiatti("Primo piatto", "Parmigiana vegana", 8,false, TypeMenuEnum.MENU_VEGAN);
+
+        //Primi piatti vegetariani
+        Portata primoPiatto6 = new PrimiPiatti("Primo piatto", "Lasagna zucchine, speck e besciamella", 10,false, TypeMenuEnum.MENU_VEGETARIAN);
+        Portata primoPiatto7 = new PrimiPiatti("Primo piatto", "Orecchiette con broccoli", 7,false, TypeMenuEnum.MENU_VEGETARIAN);
 
         menu.addPortata(primoPiatto1);
         menu.addPortata(primoPiatto2);
         menu.addPortata(primoPiatto3);
+        menu.addPortata(primoPiatto4);
+        menu.addPortata(primoPiatto5);
+        menu.addPortata(primoPiatto6);
+        menu.addPortata(primoPiatto7);
 
-        Portata secondoPiatto1 = new SecondiPiatti("Secondo piatto" , "fiorentina" , 15,false, TypeMenuEnum.MENU_CLASSIC);
-        Portata secondoPiatto2 = new SecondiPiatti("Secondo piatto" , "involtini di carne" , 8,false, TypeMenuEnum.MENU_CLASSIC);
-        Portata secondoPiatto3 = new SecondiPiatti("Secondo piatto" , "cotoletta di pollo" , 7,true, TypeMenuEnum.MENU_CLASSIC);
+        //Secondi piatti classici
+        Portata secondoPiatto1 = new SecondiPiatti("Secondo piatto" , "Fiorentina" , 15,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata secondoPiatto2 = new SecondiPiatti("Secondo piatto" , "Involtini di carne" , 8,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata secondoPiatto3 = new SecondiPiatti("Secondo piatto" , "Cotoletta di pollo" , 7,true, TypeMenuEnum.MENU_CLASSIC);
+
+        //Secondi piatti vegani
+        Portata secondoPiatto4 = new SecondiPiatti("Secondo piatto" , "Frittata di fagiolini" , 7,true, TypeMenuEnum.MENU_VEGAN);
+        Portata secondoPiatto5 = new SecondiPiatti("Secondo piatto" , "Cotoletta di ceci" , 7,true, TypeMenuEnum.MENU_VEGAN);
+
+        //Secondi piatti vegetariani
+        Portata secondoPiatto6 = new SecondiPiatti("Secondo piatto" , "Uova al tegamini con pomodoro" , 7,true, TypeMenuEnum.MENU_VEGETARIAN);
+        Portata secondoPiatto7 = new SecondiPiatti("Secondo piatto" , "Zuppa di ceci e cavolo nero" , 7,true, TypeMenuEnum.MENU_VEGETARIAN);
 
         menu.addPortata(secondoPiatto1);
         menu.addPortata(secondoPiatto2);
         menu.addPortata(secondoPiatto3);
+        menu.addPortata(secondoPiatto4);
+        menu.addPortata(secondoPiatto5);
+        menu.addPortata(secondoPiatto6);
+        menu.addPortata(secondoPiatto7);
 
         Portata dessert1 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "tortini ripieni", 3,false, TypeMenuEnum.MENU_CLASSIC);
         Portata dessert2 = new Dessert("Ristorante.FoodAndDrink.PortEnti.Dessert", "torta di ciliege", 9,true, TypeMenuEnum.MENU_CLASSIC);
@@ -76,6 +115,18 @@ public class Main {
         System.out.println("---------------------------------------------------------------------------------");
         menu.stampaPiattoDelGiorno();
         menu.stampaBevandaDelGiorno();
+
+        System.out.println("============================================================================================================================");
+
+        Cliente cliente = new Cliente("Rossi", 32, tipoGustiCliente.CLASSICO);
+        Cliente cliente1 = new Cliente("De paolo", 28, tipoGustiCliente.VEGANO);
+        Cliente cliente2 = new Cliente("De luca", 45, tipoGustiCliente.VEGETARIANO);
+
+        menu.piattoConsigliato(cliente);
+        menu.piattoConsigliato(cliente1);
+        menu.piattoConsigliato(cliente2);
+
+
 
 
 

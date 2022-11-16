@@ -121,6 +121,7 @@ public class Menu {
         }
     }
     public void piattoConsigliato(Cliente cliente){
+        System.out.println("============================Gentile " + cliente.getCognome() + " in base alle tue preferenze abbiamo il seguente menu per te============================");
         for(Portata portata : portataList){
             switch (cliente.getGusti()){
                 case VEGANO -> {

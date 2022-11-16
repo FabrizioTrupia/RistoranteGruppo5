@@ -55,7 +55,7 @@ public class Portata {
      */
     @Override
     public String toString() {
-        return "Ristorante.FoodAndDrink.Portata: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro";
+        return "Tipo: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro " + " Categoria: " + typeMenuEnum;
     }
 
     public boolean isPiattoDelGiorno(){
