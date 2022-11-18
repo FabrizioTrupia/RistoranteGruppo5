@@ -52,6 +52,8 @@ public class Drink {
         return "Bibita: " + type + " , Nome della bevanda: " + name + " , Prezzo: " + price + " euro";
     }
 
+
+
     public String getType() {
         return type;
     }
@@ -74,6 +76,10 @@ public class Drink {
 
     public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public void setDrinkDelGiorno(boolean drinkDelGiorno) {
+        this.drinkDelGiorno = drinkDelGiorno;
     }
 
     public boolean isDrinkDelGiorno(){

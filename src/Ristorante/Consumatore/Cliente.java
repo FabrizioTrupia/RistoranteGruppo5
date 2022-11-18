@@ -1,15 +1,39 @@
 package Ristorante.Consumatore;
 
-
+/**
+ * La classe che fa riferimento ai clienti
+ * @author Andrea Sciscioli
+ * @version 1
+ */
 
 public class Cliente {
+
+    /**
+     * cognome dei clienti
+     */
     private String cognome;
+
+    /**
+     * età cliente
+     */
     private Integer age;
+
+    /**
+     * fascia età del cliente
+     */
     private EnumTipoCliente type;
 
-
+    /**
+     * gusto del cliente
+     */
     private tipoGustiCliente gusti;
 
+    /**
+     * metodo costruttore cliente
+     * @param cognome --> cognome del cliente
+     * @param age --> età del cliente
+     * @param gusti --> gusto del cliente
+     */
     public Cliente(String cognome, Integer age, tipoGustiCliente gusti) {
         this.cognome = cognome;
         this.age = age;
@@ -22,8 +46,11 @@ public class Cliente {
     }
 
 
+    /**
+     * Metodo info cliente
+     */
     public void infoCliente() {
-        System.out.println(getCognome() + " anni: " + getAge() + "(Classe cliente:" + getType() + ")");
+        System.out.println("Cliente: " + getCognome() + " ,anni: " + getAge() + " (Classe cliente:" + getType() + ")");
     }
 
 

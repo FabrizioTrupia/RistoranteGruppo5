@@ -120,32 +120,36 @@ public class Menu {
             }
         }
     }
+
+    /**
+     * metodo che consiglia un piatto al cliente in base alle sue preferenze
+     * @param cliente
+     */
     public void piattoConsigliato(Cliente cliente){
         System.out.println("============================Gentile " + cliente.getCognome() + " in base alle tue preferenze abbiamo il seguente menu per te============================");
         for(Portata portata : portataList){
             switch (cliente.getGusti()){
                 case VEGANO -> {
                     if (portata.getTypeMenuEnum() == TypeMenuEnum.MENU_VEGAN) {
-                        System.out.println(portata.toString());
+                        System.out.println(portata);
                     }
-                    break;
                 }
                 case VEGETARIANO ->  {
                     if (portata.getTypeMenuEnum() == TypeMenuEnum.MENU_VEGETARIAN) {
-                        System.out.println(portata.toString());
+                        System.out.println(portata);
                     }
-                    break;
                 }
                 case CLASSICO -> {
                     if (portata.getTypeMenuEnum() == TypeMenuEnum.MENU_CLASSIC) {
-                        System.out.println(portata.toString());
+                        System.out.println(portata);
                     }
-                    break;
                 }
                 default -> System.out.println("Mi dica che genere di piatti desidera");
             }
         }
     }
+
+
     public String getType() {
         return type;
     }

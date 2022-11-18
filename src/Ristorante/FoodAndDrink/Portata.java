@@ -27,11 +27,11 @@ public class Portata {
      * possibilità di indicare se un piatto è del giorno o meno
      */
 
-    public boolean piattoDelGiorno;
+    private boolean piattoDelGiorno;
 
-
-
-
+    /**
+     * tipo di menu
+     */
     private TypeMenuEnum typeMenuEnum;
 
     /**
@@ -91,5 +91,9 @@ public class Portata {
 
     public void setTypeMenuEnum(TypeMenuEnum typeMenuEnum) {
         this.typeMenuEnum = typeMenuEnum;
+    }
+
+    public void setPiattoDelGiorno(boolean piattoDelGiorno) {
+        this.piattoDelGiorno = piattoDelGiorno;
     }
 }

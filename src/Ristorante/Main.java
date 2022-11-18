@@ -142,11 +142,15 @@ public class Main {
         Cliente cliente1 = new Cliente("De paolo", 28, tipoGustiCliente.VEGANO);
         Cliente cliente2 = new Cliente("De luca", 45, tipoGustiCliente.VEGETARIANO);
 
+
+
         menu.piattoConsigliato(cliente);
         menu.piattoConsigliato(cliente1);
         menu.piattoConsigliato(cliente2);
 
+        System.out.println("--------------------------------------------");
 
+        cliente1.infoCliente();
 
 
 
