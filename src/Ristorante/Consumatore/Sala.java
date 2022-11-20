@@ -33,18 +33,18 @@ public class Sala {
     }
 
     public void aggiungiPrenotazione (Prenotazione prenotazione){
-        if (tavoliTotali - tavoliOccupati > prenotazione.tavoliDaOccupare){
+        if (tavoliTotali - tavoliOccupati > prenotazione.getTavoliDaOccupare()){
             tavoli.add(prenotazione);
-            tavoliOccupati += prenotazione.tavoliDaOccupare;
-            if (prenotazione.tavoliDaOccupare == 1) {
+            tavoliOccupati += prenotazione.getTavoliDaOccupare();
+            if (prenotazione.getTavoliDaOccupare() == 1) {
                 System.out.println("abbiamo prenotato un tavolo per voi");
-            } else System.out.println("abbiamo unito " + prenotazione.tavoliDaOccupare + "tavoli");
+            } else System.out.println("abbiamo unito " + prenotazione.getTavoliDaOccupare() + "tavoli");
         } else System.out.println("Tutti i tavoli sono occupati");
     }
 
     public void rimuoviPrenotazione(int prenotazione){
         System.out.println("Il tavolo " + tavoli + " è disponibile per prenotazioni");
-        tavoliOccupati -= tavoli.get(prenotazione).tavoliDaOccupare;
+        tavoliOccupati -= tavoli.get(prenotazione).getTavoliDaOccupare();
         tavoli.remove(prenotazione);
     }
 }
