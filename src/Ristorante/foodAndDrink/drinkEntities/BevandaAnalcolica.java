@@ -1,4 +1,4 @@
-package Ristorante.foodAndDrink.drinEnti;
+package Ristorante.foodAndDrink.drinkEntities;
 
 import Ristorante.foodAndDrink.Drink;
 

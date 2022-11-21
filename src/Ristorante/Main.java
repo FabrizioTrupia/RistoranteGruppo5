@@ -3,12 +3,12 @@ package Ristorante;
 import Ristorante.consumatore.Cliente;
 import Ristorante.consumatore.Prenotazione;
 import Ristorante.foodAndDrink.*;
-import Ristorante.foodAndDrink.drinEnti.BevandaAlcolica;
-import Ristorante.foodAndDrink.drinEnti.BevandaAnalcolica;
-import Ristorante.foodAndDrink.portEnti.Antipasti;
-import Ristorante.foodAndDrink.portEnti.Dessert;
-import Ristorante.foodAndDrink.portEnti.PrimiPiatti;
-import Ristorante.foodAndDrink.portEnti.SecondiPiatti;
+import Ristorante.foodAndDrink.drinkEntities.BevandaAlcolica;
+import Ristorante.foodAndDrink.drinkEntities.BevandaAnalcolica;
+import Ristorante.foodAndDrink.dishEntities.Antipasti;
+import Ristorante.foodAndDrink.dishEntities.Dessert;
+import Ristorante.foodAndDrink.dishEntities.PrimiPiatti;
+import Ristorante.foodAndDrink.dishEntities.SecondiPiatti;
 
 /**
  * In questa classe sono stati creati delle istanze di oggetti nelle varie classi e aggiunti alla lista
@@ -150,17 +150,17 @@ public class Main {
 
         System.out.println("============================================================================================================================");
 
-        menu.piattoConsigliato(cliente);
+        menu.stampaPiattoInBaseAlCliente(cliente);
 
         System.out.println("============================================================================================================================");
 
 
-        menu.piattoConsigliato(cliente1);
+        menu.stampaPiattoInBaseAlCliente(cliente1);
 
         System.out.println("============================================================================================================================");
 
 
-        menu.piattoConsigliato(cliente2);
+        menu.stampaPiattoInBaseAlCliente(cliente2);
 
         System.out.println("============================================================================================================================");
 

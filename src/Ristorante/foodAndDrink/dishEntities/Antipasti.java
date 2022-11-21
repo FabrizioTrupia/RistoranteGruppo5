@@ -1,4 +1,4 @@
-package Ristorante.foodAndDrink.portEnti;
+package Ristorante.foodAndDrink.dishEntities;
 
 import Ristorante.foodAndDrink.Portata;
 import Ristorante.foodAndDrink.TipoPortate;
