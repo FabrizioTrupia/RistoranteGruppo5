@@ -1,14 +1,14 @@
-package Ristorante.FoodAndDrink.DrinEnti;
+package Ristorante.foodAndDrink.drinEnti;
 
-import Ristorante.FoodAndDrink.Drink;
+import Ristorante.foodAndDrink.Drink;
 
 /**
- * La classe che fa riferimento alle bevande analcoliche che estende la classe Ristorante.FoodAndDrink.Drink
+ * La classe che fa riferimento alle bevande alcoliche che estende la classe Ristorante.FoodAndDrink.Drink
  * @author Nicola boniello
  * @version 1
  */
 
-public class BevandaAnalcolica extends Drink {
+public class BevandaAlcolica extends Drink {
     /**
      * Metodo costruttore della classe Ristorante.FoodAndDrink.Drink
      *
@@ -17,7 +17,7 @@ public class BevandaAnalcolica extends Drink {
      * @param price --> prezzo della bevanda
      * @param drinkDelGiorno --> drink del giorno
      */
-    public BevandaAnalcolica(String type, String name, Integer price, boolean drinkDelGiorno) {
+    public BevandaAlcolica(String type, String name, Integer price, boolean drinkDelGiorno) {
         super(type, name, price, drinkDelGiorno);
     }
 }

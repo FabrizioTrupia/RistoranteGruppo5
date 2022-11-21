@@ -1,15 +1,14 @@
 package Ristorante;
 
-import Ristorante.Consumatore.Cliente;
-import Ristorante.Consumatore.Prenotazione;
-import Ristorante.Consumatore.tipoGustiCliente;
-import Ristorante.FoodAndDrink.*;
-import Ristorante.FoodAndDrink.DrinEnti.BevandaAlcolica;
-import Ristorante.FoodAndDrink.DrinEnti.BevandaAnalcolica;
-import Ristorante.FoodAndDrink.PortEnti.Antipasti;
-import Ristorante.FoodAndDrink.PortEnti.Dessert;
-import Ristorante.FoodAndDrink.PortEnti.PrimiPiatti;
-import Ristorante.FoodAndDrink.PortEnti.SecondiPiatti;
+import Ristorante.consumatore.Cliente;
+import Ristorante.consumatore.Prenotazione;
+import Ristorante.foodAndDrink.*;
+import Ristorante.foodAndDrink.drinEnti.BevandaAlcolica;
+import Ristorante.foodAndDrink.drinEnti.BevandaAnalcolica;
+import Ristorante.foodAndDrink.portEnti.Antipasti;
+import Ristorante.foodAndDrink.portEnti.Dessert;
+import Ristorante.foodAndDrink.portEnti.PrimiPiatti;
+import Ristorante.foodAndDrink.portEnti.SecondiPiatti;
 
 /**
  * In questa classe sono stati creati delle istanze di oggetti nelle varie classi e aggiunti alla lista
@@ -30,21 +29,21 @@ public class Main {
          *Antipasti classici
          */
 
-        Portata antipasto1 = new Antipasti("Antipasto", "Tagliere di salumi" , 8,false, TypeMenuEnum.MENU_CLASSIC);
-        Portata antipasto2 = new Antipasti("Antipasto", "Rustici di carne" , 6,true, TypeMenuEnum.MENU_CLASSIC);
-        Portata antipasto3 = new Antipasti("Antipasto", "Tartare di manzo", 8,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata antipasto1 = new Antipasti("Antipasto", "Tagliere di salumi" , 8,false, TipoPortate.CLASSICO);
+        Portata antipasto2 = new Antipasti("Antipasto", "Rustici di carne" , 6,true, TipoPortate.CLASSICO);
+        Portata antipasto3 = new Antipasti("Antipasto", "Tartare di manzo", 8,false, TipoPortate.CLASSICO);
 
         /**
          *Antipasti vegani
          */
-        Portata antipasto4 = new Antipasti("Antipasto", "Tartare di zucchine e tartufo", 8,true, TypeMenuEnum.MENU_VEGAN);
-        Portata antipasto5 = new Antipasti("Antipasto", "Toast con Avocado e melanzane", 8,false, TypeMenuEnum.MENU_VEGAN);
+        Portata antipasto4 = new Antipasti("Antipasto", "Tartare di zucchine e tartufo", 8,true, TipoPortate.VEGANO);
+        Portata antipasto5 = new Antipasti("Antipasto", "Toast con Avocado e melanzane", 8,false, TipoPortate.VEGANO);
 
         /**
          *Antipasti vegetariani
          */
-        Portata antipasto6 = new Antipasti("Antipasto", "Bruschette con pomodoro", 8,false, TypeMenuEnum.MENU_VEGETARIAN);
-        Portata antipasto7 = new Antipasti("Antipasto", "Grigliata di verdura mista", 8,true, TypeMenuEnum.MENU_VEGETARIAN);
+        Portata antipasto6 = new Antipasti("Antipasto", "Bruschette con pomodoro", 8,false, TipoPortate.VEGETARIANO);
+        Portata antipasto7 = new Antipasti("Antipasto", "Grigliata di verdura mista", 8,true, TipoPortate.VEGETARIANO);
 
         menu.addPortata(antipasto1);
         menu.addPortata(antipasto2);
@@ -57,21 +56,21 @@ public class Main {
         /**
          *Primi piatti classici
          */
-        Portata primoPiatto1 = new PrimiPiatti("Primo piatto", "Spaghetti alla carbonara", 11,true, TypeMenuEnum.MENU_CLASSIC);
-        Portata primoPiatto2 = new PrimiPiatti("Primo piatto", "Rigatoni alla bolognese", 9,false, TypeMenuEnum.MENU_CLASSIC);
-        Portata primoPiatto3 = new PrimiPiatti("Primo piatto", "Tortiglioni salsiccia e cipolla", 8,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata primoPiatto1 = new PrimiPiatti("Primo piatto", "Spaghetti alla carbonara", 11,true, TipoPortate.CLASSICO);
+        Portata primoPiatto2 = new PrimiPiatti("Primo piatto", "Rigatoni alla bolognese", 9,false, TipoPortate.CLASSICO);
+        Portata primoPiatto3 = new PrimiPiatti("Primo piatto", "Tortiglioni salsiccia e cipolla", 8,false, TipoPortate.CLASSICO);
 
         /**
          *Primi piatti vegani
          */
-        Portata primoPiatto4 = new PrimiPiatti("Primo piatto", "Linguine pompelmo e pistacchio", 12,false, TypeMenuEnum.MENU_VEGAN);
-        Portata primoPiatto5 = new PrimiPiatti("Primo piatto", "Parmigiana vegana", 8,true, TypeMenuEnum.MENU_VEGAN);
+        Portata primoPiatto4 = new PrimiPiatti("Primo piatto", "Linguine pompelmo e pistacchio", 12,false, TipoPortate.VEGANO);
+        Portata primoPiatto5 = new PrimiPiatti("Primo piatto", "Parmigiana vegana", 8,true, TipoPortate.VEGANO);
 
         /**
          * Primi piatti vegetariani
          */
-        Portata primoPiatto6 = new PrimiPiatti("Primo piatto", "Lasagna zucchine, speck e besciamella", 10,false, TypeMenuEnum.MENU_VEGETARIAN);
-        Portata primoPiatto7 = new PrimiPiatti("Primo piatto", "Orecchiette con broccoli", 7,true, TypeMenuEnum.MENU_VEGETARIAN);
+        Portata primoPiatto6 = new PrimiPiatti("Primo piatto", "Lasagna zucchine, speck e besciamella", 10,false, TipoPortate.VEGETARIANO);
+        Portata primoPiatto7 = new PrimiPiatti("Primo piatto", "Orecchiette con broccoli", 7,true, TipoPortate.VEGETARIANO);
 
         menu.addPortata(primoPiatto1);
         menu.addPortata(primoPiatto2);
@@ -84,21 +83,21 @@ public class Main {
         /**
          *Secondi piatti classici
          */
-        Portata secondoPiatto1 = new SecondiPiatti("Secondo piatto" , "Fiorentina" , 15,false, TypeMenuEnum.MENU_CLASSIC);
-        Portata secondoPiatto2 = new SecondiPiatti("Secondo piatto" , "Involtini di carne" , 8,false, TypeMenuEnum.MENU_CLASSIC);
-        Portata secondoPiatto3 = new SecondiPiatti("Secondo piatto" , "Cotoletta di pollo" , 7,true, TypeMenuEnum.MENU_CLASSIC);
+        Portata secondoPiatto1 = new SecondiPiatti("Secondo piatto" , "Fiorentina" , 15,false, TipoPortate.CLASSICO);
+        Portata secondoPiatto2 = new SecondiPiatti("Secondo piatto" , "Involtini di carne" , 8,false, TipoPortate.CLASSICO);
+        Portata secondoPiatto3 = new SecondiPiatti("Secondo piatto" , "Cotoletta di pollo" , 7,true, TipoPortate.CLASSICO);
 
         /**
          *Secondi piatti vegani
          */
-        Portata secondoPiatto4 = new SecondiPiatti("Secondo piatto" , "Frittata di fagiolini" , 7,true, TypeMenuEnum.MENU_VEGAN);
-        Portata secondoPiatto5 = new SecondiPiatti("Secondo piatto" , "Cotoletta di ceci" , 7,false, TypeMenuEnum.MENU_VEGAN);
+        Portata secondoPiatto4 = new SecondiPiatti("Secondo piatto" , "Frittata di fagiolini" , 7,true, TipoPortate.VEGANO);
+        Portata secondoPiatto5 = new SecondiPiatti("Secondo piatto" , "Cotoletta di ceci" , 7,false, TipoPortate.VEGANO);
 
         /**
          *Secondi piatti vegetariani
          */
-        Portata secondoPiatto6 = new SecondiPiatti("Secondo piatto" , "Uova al tegamini con pomodoro" , 7,true, TypeMenuEnum.MENU_VEGETARIAN);
-        Portata secondoPiatto7 = new SecondiPiatti("Secondo piatto" , "Zuppa di ceci e cavolo nero" , 7,false, TypeMenuEnum.MENU_VEGETARIAN);
+        Portata secondoPiatto6 = new SecondiPiatti("Secondo piatto" , "Uova al tegamini con pomodoro" , 7,true, TipoPortate.VEGETARIANO);
+        Portata secondoPiatto7 = new SecondiPiatti("Secondo piatto" , "Zuppa di ceci e cavolo nero" , 7,false, TipoPortate.VEGETARIANO);
 
         menu.addPortata(secondoPiatto1);
         menu.addPortata(secondoPiatto2);
@@ -108,9 +107,9 @@ public class Main {
         menu.addPortata(secondoPiatto6);
         menu.addPortata(secondoPiatto7);
 
-        Portata dessert1 = new Dessert("Dessert", "tortini ripieni", 3,false, TypeMenuEnum.MENU_CLASSIC);
-        Portata dessert2 = new Dessert("Dessert", "torta di ciliege", 9,true, TypeMenuEnum.MENU_CLASSIC);
-        Portata dessert3 = new Dessert("Dessert", "crostata di mele", 6,false, TypeMenuEnum.MENU_CLASSIC);
+        Portata dessert1 = new Dessert("Dessert", "tortini ripieni", 3,false, TipoPortate.CLASSICO);
+        Portata dessert2 = new Dessert("Dessert", "torta di ciliege", 9,true, TipoPortate.CLASSICO);
+        Portata dessert3 = new Dessert("Dessert", "crostata di mele", 6,false, TipoPortate.CLASSICO);
 
         menu.addPortata(dessert1);
         menu.addPortata(dessert2);
@@ -141,9 +140,9 @@ public class Main {
 
         System.out.println("============================================================================================================================");
 
-        Cliente cliente = new Cliente("Rossi",  tipoGustiCliente.CLASSICO);
-        Cliente cliente1 = new Cliente("De paolo", tipoGustiCliente.VEGANO);
-        Cliente cliente2 = new Cliente("De luca", tipoGustiCliente.VEGETARIANO);
+        Cliente cliente = new Cliente("Rossi",  TipoPortate.CLASSICO);
+        Cliente cliente1 = new Cliente("De paolo", TipoPortate.VEGANO);
+        Cliente cliente2 = new Cliente("De luca", TipoPortate.VEGETARIANO);
 
         cliente.infoCliente();
         cliente1.infoCliente();

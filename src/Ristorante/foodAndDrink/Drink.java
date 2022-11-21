@@ -1,4 +1,4 @@
-package Ristorante.FoodAndDrink;
+package Ristorante.foodAndDrink;
 
 /**
  * La classe che fa riferimento ai Ristorante.FoodAndDrink.Drink

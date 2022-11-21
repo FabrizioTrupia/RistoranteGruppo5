@@ -1,4 +1,4 @@
-package Ristorante.Consumatore;
+package Ristorante.consumatore;
 
 /**
  * La classe che fa riferimento alle prenotazioni dei tavoli

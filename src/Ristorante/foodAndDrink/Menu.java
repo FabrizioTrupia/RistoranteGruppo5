@@ -1,7 +1,6 @@
-package Ristorante.FoodAndDrink;
+package Ristorante.foodAndDrink;
 
-import Ristorante.Consumatore.Cliente;
-import Ristorante.Consumatore.tipoGustiCliente;
+import Ristorante.consumatore.Cliente;
 
 import java.util.ArrayList;
 import java.util.List;

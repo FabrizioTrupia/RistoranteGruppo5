@@ -1,4 +1,6 @@
-package Ristorante.Consumatore;
+package Ristorante.consumatore;
+
+import Ristorante.foodAndDrink.TipoPortate;
 
 /**
  * La classe che fa riferimento ai clienti
@@ -16,14 +18,14 @@ public class Cliente {
     /**
      * gusto del cliente
      */
-    private tipoGustiCliente gusti;
+    private TipoPortate gusti;
 
     /**
      * metodo costruttore cliente
      * @param cognome --> cognome del cliente
      * @param gusti --> gusto del cliente
      */
-    public Cliente(String cognome, tipoGustiCliente gusti) {
+    public Cliente(String cognome, TipoPortate gusti) {
         this.cognome = cognome;
         this.gusti = gusti;
     }
@@ -45,11 +47,11 @@ public class Cliente {
     }
 
 
-    public tipoGustiCliente getGusti() {
+    public TipoPortate getGusti() {
         return gusti;
     }
 
-    public void setGusti(tipoGustiCliente gusti) {
+    public void setGusti(TipoPortate gusti) {
         this.gusti = gusti;
     }
 }
