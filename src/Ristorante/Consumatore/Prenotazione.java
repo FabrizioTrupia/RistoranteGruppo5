@@ -1,9 +1,5 @@
 package Ristorante.Consumatore;
 
-import Ristorante.Consumatore.Cliente;
-
-import java.util.ArrayList;
-
 /**
  * La classe che fa riferimento alle prenotazioni dei tavoli
  * @author Andrea Sciscioli
@@ -12,43 +8,35 @@ import java.util.ArrayList;
 public class Prenotazione {
 
     /**
-     * tavoli occupati
+     * numero persone per singola prenotazione
      */
-    private Integer tavoliDaOccupare;
+    private Integer numeroPersone;
+
 
     /**
-     * array list delle prenotazioni fatte dai clienti
+     * Metodo costruttore vuoto
      */
-    private ArrayList<Cliente> prenotazione = new ArrayList<>();
+    public Prenotazione() {
+    }
 
     /**
-     * metodo costruttore
-     * @param prenotazione
+     * Metodo aggiungi una prenotazione
+     * @param numeroPersone -> numero persone che prenotano un tavolo
+     * @param cliente -> classe cliente
      */
-    public Prenotazione (ArrayList<Cliente> prenotazione){
-        this.prenotazione = prenotazione;
-        if (prenotazione.size() <= 4){
-            this.tavoliDaOccupare = 1;
-        } else if (prenotazione.size() > 4 && prenotazione.size() <= 6){
-            this.tavoliDaOccupare = 2;
-        } else this.tavoliDaOccupare = 2 + (((prenotazione.size() -6)/2) + ((prenotazione.size()-6)%2));
+    public void aggiungiPrenotazione (Integer numeroPersone , Cliente cliente){
+        this.numeroPersone = numeroPersone;
+        System.out.println("Per il cliente: " + cliente.getCognome() + " è' stato prenotato un tavolo per " + getNumeroPersone() + " persone");
     }
 
 
-    public Integer getTavoliDaOccupare() {
-        return tavoliDaOccupare;
+    public Integer getNumeroPersone() {
+        return numeroPersone;
     }
 
-    public void setTavoliDaOccupare(Integer tavoliDaOccupare) {
-        this.tavoliDaOccupare = tavoliDaOccupare;
+    public void setNumeroPersone(Integer numeroPersone) {
+        this.numeroPersone = numeroPersone;
     }
 
-    public ArrayList<Cliente> getPrenotazione() {
-        return prenotazione;
-    }
-
-    public void setPrenotazione(ArrayList<Cliente> prenotazione) {
-        this.prenotazione = prenotazione;
-    }
 }
 

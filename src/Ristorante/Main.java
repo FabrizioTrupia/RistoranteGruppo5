@@ -1,6 +1,7 @@
 package Ristorante;
 
 import Ristorante.Consumatore.Cliente;
+import Ristorante.Consumatore.Prenotazione;
 import Ristorante.Consumatore.tipoGustiCliente;
 import Ristorante.FoodAndDrink.*;
 import Ristorante.FoodAndDrink.DrinEnti.BevandaAlcolica;
@@ -132,25 +133,44 @@ public class Main {
 
 
         menu.stampaMenu();
-        System.out.println("---------------------------------------------------------------------------------");
+
+        System.out.println("============================================================================================================================");
+
         menu.stampaPiattoDelGiorno();
         menu.stampaBevandaDelGiorno();
 
         System.out.println("============================================================================================================================");
 
         Cliente cliente = new Cliente("Rossi",  tipoGustiCliente.CLASSICO);
-        Cliente cliente1 = new Cliente("De paolo",  tipoGustiCliente.VEGANO);
-        Cliente cliente2 = new Cliente("De luca",  tipoGustiCliente.VEGETARIANO);
+        Cliente cliente1 = new Cliente("De paolo", tipoGustiCliente.VEGANO);
+        Cliente cliente2 = new Cliente("De luca", tipoGustiCliente.VEGETARIANO);
 
+        cliente.infoCliente();
+        cliente1.infoCliente();
+        cliente2.infoCliente();
 
+        System.out.println("============================================================================================================================");
 
         menu.piattoConsigliato(cliente);
+
+        System.out.println("============================================================================================================================");
+
+
         menu.piattoConsigliato(cliente1);
+
+        System.out.println("============================================================================================================================");
+
+
         menu.piattoConsigliato(cliente2);
 
-        System.out.println("--------------------------------------------");
+        System.out.println("============================================================================================================================");
 
-        cliente1.infoCliente();
+
+        Prenotazione prenotazione = new Prenotazione();
+
+        prenotazione.aggiungiPrenotazione(6 , cliente);
+        prenotazione.aggiungiPrenotazione(2 , cliente1);
+        prenotazione.aggiungiPrenotazione(9 , cliente2);
 
 
 
