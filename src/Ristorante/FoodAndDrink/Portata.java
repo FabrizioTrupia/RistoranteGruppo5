@@ -1,3 +1,5 @@
+package Ristorante.FoodAndDrink;
+
 /**
  * La classe che fa riferimento alla portata
  * @author Fabrizio Trupia , Alessandro Trupia , Nicola Boniello , Andrea Sciscioli
@@ -25,7 +27,12 @@ public class Portata {
      * possibilità di indicare se un piatto è del giorno o meno
      */
 
-    public boolean piattoDelGiorno;
+    private boolean piattoDelGiorno;
+
+    /**
+     * tipo di menu
+     */
+    private TypeMenuEnum typeMenuEnum;
 
     /**
      * Metodo costruttore della classe portata
@@ -34,11 +41,12 @@ public class Portata {
      * @param price --> prezzo del piatto
      * @param piattoDelGiorno --> piatto del giorno
      */
-    public Portata(String type, String name,Integer price, boolean piattoDelGiorno){
+    public Portata(String type, String name,Integer price, boolean piattoDelGiorno, TypeMenuEnum typeMenuEnum){
         this.type = type;
         this.name = name;
         this.price = price;
         this.piattoDelGiorno=piattoDelGiorno;
+        this.typeMenuEnum=typeMenuEnum;
     }
 
     /**
@@ -47,7 +55,7 @@ public class Portata {
      */
     @Override
     public String toString() {
-        return "Portata: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro";
+        return "Tipo: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro " + " Categoria: " + typeMenuEnum;
     }
 
     public boolean isPiattoDelGiorno(){
@@ -76,5 +84,16 @@ public class Portata {
 
     public void setPrice(Integer price) {
         this.price = price;
+    }
+    public TypeMenuEnum getTypeMenuEnum() {
+        return typeMenuEnum;
+    }
+
+    public void setTypeMenuEnum(TypeMenuEnum typeMenuEnum) {
+        this.typeMenuEnum = typeMenuEnum;
+    }
+
+    public void setPiattoDelGiorno(boolean piattoDelGiorno) {
+        this.piattoDelGiorno = piattoDelGiorno;
     }
 }

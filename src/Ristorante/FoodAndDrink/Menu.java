@@ -1,6 +1,10 @@
+package Ristorante.FoodAndDrink;
+
+import Ristorante.Consumatore.Cliente;
+import Ristorante.Consumatore.tipoGustiCliente;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * La classe che fa riferimento al menu
@@ -61,7 +65,7 @@ public class Menu {
     /**
      * Un metodo che aggiunge le portate all lista "portataList"
      *
-     * @param portata --> parametro che richiama la classe Portata
+     * @param portata --> parametro che richiama la classe Ristorante.FoodAndDrink.Portata
      */
     public void addPortata(Portata portata) {
         portataList.add(portata);
@@ -70,7 +74,7 @@ public class Menu {
     /**
      * Un metodo che aggiunge i drink all lista "drinkList"
      *
-     * @param drink --> parametro che richiama la classe Drink
+     * @param drink --> parametro che richiama la classe Ristorante.FoodAndDrink.Drink
      */
     public void addDrink(Drink drink) {
         drinkList.add(drink);
@@ -79,7 +83,7 @@ public class Menu {
     /**
      * Metodo che rimuove una portata dalla lista "portataList"
      *
-     * @param portata --> parametro che richiama la classe Portata
+     * @param portata --> parametro che richiama la classe Ristorante.FoodAndDrink.Portata
      */
     public void removePortata(Portata portata) {
 
@@ -100,10 +104,9 @@ public class Menu {
     public void stampaPiattoDelGiorno() {
         for (Portata piattoDelGiorno : portataList) {
             if (piattoDelGiorno.isPiattoDelGiorno()) {
-                System.out.println("Piatto del giorno raccomandato: " + piattoDelGiorno.getType() + " = " + piattoDelGiorno.getName() + " - " + piattoDelGiorno.getPrice() + " euro ");
+                System.out.println("Piatto del giorno raccomandato: " + piattoDelGiorno.getType() + " = " + piattoDelGiorno.getName() + " - " + piattoDelGiorno.getPrice() + " euro " + "Tipo: " + piattoDelGiorno.getTypeMenuEnum());
             }
         }
-
     }
 
     /**
@@ -114,6 +117,34 @@ public class Menu {
         for (Drink drinkDelGiorno:drinkList) {
             if (drinkDelGiorno.isDrinkDelGiorno()) {
                 System.out.println("Bevanda del giorno raccomandata: " + drinkDelGiorno.getType() + " = " + drinkDelGiorno.getName() + " - " + drinkDelGiorno.getPrice() + " euro ");
+            }
+        }
+    }
+
+    /**
+     * metodo che consiglia un piatto al cliente in base alle sue preferenze
+     * @param cliente
+     */
+    public void piattoConsigliato(Cliente cliente){
+        System.out.println("============================Gentile " + cliente.getCognome() + " in base alle tue preferenze abbiamo il seguente menu per te============================");
+        for(Portata portata : portataList){
+            switch (cliente.getGusti()){
+                case VEGANO -> {
+                    if (portata.getTypeMenuEnum() == TypeMenuEnum.MENU_VEGAN) {
+                        System.out.println(portata);
+                    }
+                }
+                case VEGETARIANO ->  {
+                    if (portata.getTypeMenuEnum() == TypeMenuEnum.MENU_VEGETARIAN) {
+                        System.out.println(portata);
+                    }
+                }
+                case CLASSICO -> {
+                    if (portata.getTypeMenuEnum() == TypeMenuEnum.MENU_CLASSIC) {
+                        System.out.println(portata);
+                    }
+                }
+                default -> System.out.println("Mi dica che genere di piatti desidera");
             }
         }
     }
