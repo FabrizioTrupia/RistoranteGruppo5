@@ -103,7 +103,7 @@ public class Menu {
     public void stampaPiattoDelGiorno() {
         for (Portata piattoDelGiorno : portataList) {
             if (piattoDelGiorno.isPiattoDelGiorno()) {
-                System.out.println("Piatto del giorno raccomandato: " + piattoDelGiorno.getType() + " = " + piattoDelGiorno.getName() + " - " + piattoDelGiorno.getPrice() + " euro " + "Tipo: " + piattoDelGiorno.getTypeMenuEnum());
+                System.out.println("Piatto del giorno raccomandato: " + piattoDelGiorno.getType() + " = " + piattoDelGiorno.getName() + " - " + piattoDelGiorno.getPrice() + " euro " + "Tipo: " + piattoDelGiorno.getTipoPortata());
             }
         }
     }
@@ -127,23 +127,8 @@ public class Menu {
     public void piattoConsigliato(Cliente cliente){
         System.out.println("============================Gentile " + cliente.getCognome() + " in base alle tue preferenze abbiamo il seguente menu per te============================");
         for(Portata portata : portataList){
-            switch (cliente.getGusti()){
-                case VEGANO -> {
-                    if (portata.getTypeMenuEnum() == TypeMenuEnum.MENU_VEGAN) {
-                        System.out.println(portata);
-                    }
-                }
-                case VEGETARIANO ->  {
-                    if (portata.getTypeMenuEnum() == TypeMenuEnum.MENU_VEGETARIAN) {
-                        System.out.println(portata);
-                    }
-                }
-                case CLASSICO -> {
-                    if (portata.getTypeMenuEnum() == TypeMenuEnum.MENU_CLASSIC) {
-                        System.out.println(portata);
-                    }
-                }
-                default -> System.out.println("Mi dica che genere di piatti desidera");
+            if (cliente.getGusti() == portata.getTipoPortata()){
+                System.out.println(portata);
             }
         }
     }

@@ -87,12 +87,12 @@ public class Portata {
     public void setPrice(Integer price) {
         this.price = price;
     }
-    public TipoPortate getTypeMenuEnum() {
+    public TipoPortate getTipoPortata() {
         return tipoPortata;
     }
 
-    public void setTypeMenuEnum(TipoPortate typeMenuEnum) {
-        this.tipoPortata = typeMenuEnum;
+    public void setTipoPortata(TipoPortate typeMenuEnum) {
+        this.tipoPortata = tipoPortata;
     }
 
     public void setPiattoDelGiorno(boolean piattoDelGiorno) {
