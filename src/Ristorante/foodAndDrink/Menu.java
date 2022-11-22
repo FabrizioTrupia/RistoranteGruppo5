@@ -30,24 +30,21 @@ public class Menu {
     /**
      * Lista delle portate
      */
-    private List<Portata> portataList = new ArrayList<>();
+
 
     /**
      * Lista delle bevande
      */
     private List<Drink> drinkList = new ArrayList<>();
 
+    private List<Portata> portata;
+
     /**
-     * Il costruttore del menu
      *
-     * @param type    --> menu
-     * @param name    --> nome del ristorante
-     * @param coperto --> prezzo del coperto
+     * @param list
      */
-    public Menu(String type, String name, Integer coperto) {
-        this.type = type;
-        this.name = name;
-        this.coperto = coperto;
+    public Menu(List<Portata> list) {
+        this.portata = list;
     }
 
     /**
@@ -61,15 +58,14 @@ public class Menu {
         return "Tipo di menu: " + type + " Nome del ristorante: " + name + " Coperto: " + coperto + " euro";
     }
 
-    /**
-     * Un metodo che aggiunge le portate all lista "portataList"
-     *
-     * @param portata --> parametro che richiama la classe Ristorante.FoodAndDrink.Portata
-     */
-    public void addPortata(Portata portata) {
-        portataList.add(portata);
-    }
 
+
+
+
+
+    public void aggiungereListaALMenu(List<Portata> list){
+        this.portata.addAll(list);
+    }
     /**
      * Un metodo che aggiunge i drink all lista "drinkList"
      *
@@ -79,29 +75,24 @@ public class Menu {
         drinkList.add(drink);
     }
 
-    /**
-     * Metodo che rimuove una portata dalla lista "portataList"
-     *
-     * @param portata --> parametro che richiama la classe Ristorante.FoodAndDrink.Portata
-     */
-    public void removePortata(Portata portata) {
 
-        portataList.remove(portata);
-    }
 
     /**
      * Un metodo per stampare il menu
      */
     public void stampaMenu() {
-        portataList.forEach(System.out::println);
+        portata.forEach(System.out::println);
         drinkList.forEach(System.out::println);
     }
+
+
+
 
     /**
      * un metodo per stampare il piatto del giorno e le relative informazioni del piatto
      */
     public void stampaPiattoDelGiorno() {
-        for (Portata piattoDelGiorno : portataList) {
+        for (Portata piattoDelGiorno : portata) {
             if (piattoDelGiorno.isPiattoDelGiorno()) {
                 System.out.println("Piatto del giorno raccomandato: " + piattoDelGiorno.getType() + " = " + piattoDelGiorno.getName() + " - " + piattoDelGiorno.getPrice() + " euro " + "Tipo: " + piattoDelGiorno.getTipoPortata());
             }
@@ -126,7 +117,7 @@ public class Menu {
      */
     public void stampaPiattoInBaseAlCliente(Cliente cliente){
         System.out.println("============================Gentile " + cliente.getCognome() + " in base alle tue preferenze abbiamo il seguente menu per te============================");
-        for(Portata portata : portataList){
+        for(Portata portata : portata){
             if (cliente.getGusti() == portata.getTipoPortata()){
                 System.out.println(portata);
             }
@@ -159,11 +150,11 @@ public class Menu {
     }
 
     public List<Portata> getPortataList() {
-        return portataList;
+        return portata;
     }
 
     public void setPortataList(List<Portata> portataList) {
-        this.portataList = portataList;
+        this.portata = portataList;
     }
 
     public List<Drink> getDrinkList() {
