@@ -182,16 +182,21 @@ public class Main {
 
         System.out.println("============================================================================================================================");
 
+        Prenotazione prenotazione = new Prenotazione(new ArrayList<>());
 
-        Prenotazione prenotazione = new Prenotazione();
+        List<Cliente> clienteList = new ArrayList<>();
 
-        prenotazione.aggiungiPrenotazione(cliente);
-        prenotazione.aggiungiPrenotazione(cliente1);
-        prenotazione.aggiungiPrenotazione(cliente2);
+        clienteList.add(cliente);
+        clienteList.add(cliente1);
+        clienteList.add(cliente2);
+        prenotazione.aggiungerePrenotazioni(clienteList);
 
-        prenotazione.rimuoviPrenotazione(cliente2);
+        prenotazione.stampaPrenotazioni();
 
-        prenotazione.stampaPrenotoazioni();
+
+
+
+
 
 
 

@@ -1,28 +1,29 @@
 package Ristorante.consumatore;
-import java.util.ArrayList;
+
+import java.util.List;
+
 /**
- * La classe che fa riferimento alle prenotazioni dei tavoli
- * @author Andrea Sciscioli
- * @version 1
+ * La classe che fa riferimento alle prenotazioni cliente
+ * @author Fabrizio Trupia , Alessandro Trupia , Nicola Boniello , Andrea Sciscioli
+ * @version 2.0
  */
 
 
 public class Prenotazione {
 
-    private final ArrayList<Cliente> riservato = new ArrayList<>();
+    private List<Cliente> cliente;
 
-    public void aggiungiPrenotazione (Cliente cliente){
-        riservato.add(cliente);
+    public Prenotazione(List<Cliente> clienteList) {
+        this.cliente = clienteList;
     }
 
-    public void rimuoviPrenotazione(Cliente cliente){
-        riservato.remove(cliente);
+    public void aggiungerePrenotazioni(List<Cliente> clienteList) {
+        this.cliente.addAll(clienteList);
     }
 
-    public void stampaPrenotoazioni(){
-        for (Cliente listaPrenotazioni : riservato){
-            System.out.println(listaPrenotazioni);
-        }
+    public void stampaPrenotazioni(){
+    cliente.forEach(System.out::println);
     }
+
 }
 
