@@ -140,9 +140,9 @@ public class Main {
 
         System.out.println("============================================================================================================================");
 
-        Cliente cliente = new Cliente("Rossi",  TipoPortate.CLASSICO);
-        Cliente cliente1 = new Cliente("De paolo", TipoPortate.VEGANO);
-        Cliente cliente2 = new Cliente("De luca", TipoPortate.VEGETARIANO);
+        Cliente cliente = new Cliente("Rossi",  TipoPortate.CLASSICO,"25 Dicembre 20:00");
+        Cliente cliente1 = new Cliente("De paolo", TipoPortate.VEGANO,"25 Dicembre 21:00");
+        Cliente cliente2 = new Cliente("De luca", TipoPortate.VEGETARIANO,"25 Dicembre 22:00");
 
         cliente.infoCliente();
         cliente1.infoCliente();
@@ -167,10 +167,13 @@ public class Main {
 
         Prenotazione prenotazione = new Prenotazione();
 
-        prenotazione.aggiungiPrenotazione(6 , cliente);
-        prenotazione.aggiungiPrenotazione(2 , cliente1);
-        prenotazione.aggiungiPrenotazione(9 , cliente2);
+        prenotazione.aggiungiPrenotazione(cliente);
+        prenotazione.aggiungiPrenotazione(cliente1);
+        prenotazione.aggiungiPrenotazione(cliente2);
 
+        prenotazione.rimuoviPrenotazione(cliente2);
+
+        prenotazione.stampaPrenotoazioni();
 
 
 

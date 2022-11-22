@@ -20,14 +20,23 @@ public class Cliente {
      */
     private TipoPortate gusti;
 
+    private String dataPrenotazione;
+
+
     /**
      * metodo costruttore cliente
      * @param cognome --> cognome del cliente
      * @param gusti --> gusto del cliente
      */
-    public Cliente(String cognome, TipoPortate gusti) {
+    public Cliente(String cognome, TipoPortate gusti, String dataPrenotazione) {
+        this.dataPrenotazione = dataPrenotazione;
         this.cognome = cognome;
         this.gusti = gusti;
+    }
+
+    @Override
+    public String toString() {
+        return "Prenotazione cliente : " + cognome + ". Data prenotazione : " + dataPrenotazione;
     }
 
     /**

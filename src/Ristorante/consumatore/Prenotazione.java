@@ -1,42 +1,28 @@
 package Ristorante.consumatore;
-
+import java.util.ArrayList;
 /**
  * La classe che fa riferimento alle prenotazioni dei tavoli
  * @author Andrea Sciscioli
  * @version 1
  */
+
+
 public class Prenotazione {
 
-    /**
-     * numero persone per singola prenotazione
-     */
-    private Integer numeroPersone;
+    private final ArrayList<Cliente> riservato = new ArrayList<>();
 
-
-    /**
-     * Metodo costruttore vuoto
-     */
-    public Prenotazione() {
+    public void aggiungiPrenotazione (Cliente cliente){
+        riservato.add(cliente);
     }
 
-    /**
-     * Metodo aggiungi una prenotazione
-     * @param numeroPersone -> numero persone che prenotano un tavolo
-     * @param cliente -> classe cliente
-     */
-    public void aggiungiPrenotazione (Integer numeroPersone , Cliente cliente){
-        this.numeroPersone = numeroPersone;
-        System.out.println("Per il cliente: " + cliente.getCognome() + " è' stato prenotato un tavolo per " + getNumeroPersone() + " persone");
+    public void rimuoviPrenotazione(Cliente cliente){
+        riservato.remove(cliente);
     }
 
-
-    public Integer getNumeroPersone() {
-        return numeroPersone;
+    public void stampaPrenotoazioni(){
+        for (Cliente listaPrenotazioni : riservato){
+            System.out.println(listaPrenotazioni);
+        }
     }
-
-    public void setNumeroPersone(Integer numeroPersone) {
-        this.numeroPersone = numeroPersone;
-    }
-
 }
 
