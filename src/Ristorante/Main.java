@@ -10,6 +10,9 @@ import Ristorante.foodAndDrink.dishEntities.Dessert;
 import Ristorante.foodAndDrink.dishEntities.PrimiPiatti;
 import Ristorante.foodAndDrink.dishEntities.SecondiPiatti;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * In questa classe sono stati creati delle istanze di oggetti nelle varie classi e aggiunti alla lista
  *  con il metodo stampaMenu viene stampato il menu
@@ -23,12 +26,13 @@ import Ristorante.foodAndDrink.dishEntities.SecondiPiatti;
 public class Main {
     public static void main(String[] args) {
 
-        Menu menu = new Menu("Ristorante a base di carne", "Team 5" , 2);
+        Menu menu = new Menu(new ArrayList<>());
 
         /**
          *Antipasti classici
          */
 
+        List<Portata> antipastoLista = new ArrayList<>();
         Portata antipasto1 = new Antipasti("Antipasto", "Tagliere di salumi" , 8,false, TipoPortate.CLASSICO);
         Portata antipasto2 = new Antipasti("Antipasto", "Rustici di carne" , 6,true, TipoPortate.CLASSICO);
         Portata antipasto3 = new Antipasti("Antipasto", "Tartare di manzo", 8,false, TipoPortate.CLASSICO);
@@ -45,17 +49,20 @@ public class Main {
         Portata antipasto6 = new Antipasti("Antipasto", "Bruschette con pomodoro", 8,false, TipoPortate.VEGETARIANO);
         Portata antipasto7 = new Antipasti("Antipasto", "Grigliata di verdura mista", 8,true, TipoPortate.VEGETARIANO);
 
-        menu.addPortata(antipasto1);
-        menu.addPortata(antipasto2);
-        menu.addPortata(antipasto3);
-        menu.addPortata(antipasto4);
-        menu.addPortata(antipasto5);
-        menu.addPortata(antipasto6);
-        menu.addPortata(antipasto7);
+        antipastoLista.add(antipasto1);
+        antipastoLista.add(antipasto2);
+        antipastoLista.add(antipasto3);
+        antipastoLista.add(antipasto4);
+        antipastoLista.add(antipasto5);
+        antipastoLista.add(antipasto6);
+        antipastoLista.add(antipasto7);
+        menu.aggiungereListaALMenu(antipastoLista);
 
         /**
          *Primi piatti classici
          */
+
+        List<Portata> primiPiattiLista = new ArrayList<>();
         Portata primoPiatto1 = new PrimiPiatti("Primo piatto", "Spaghetti alla carbonara", 11,true, TipoPortate.CLASSICO);
         Portata primoPiatto2 = new PrimiPiatti("Primo piatto", "Rigatoni alla bolognese", 9,false, TipoPortate.CLASSICO);
         Portata primoPiatto3 = new PrimiPiatti("Primo piatto", "Tortiglioni salsiccia e cipolla", 8,false, TipoPortate.CLASSICO);
@@ -72,17 +79,20 @@ public class Main {
         Portata primoPiatto6 = new PrimiPiatti("Primo piatto", "Lasagna zucchine, speck e besciamella", 10,false, TipoPortate.VEGETARIANO);
         Portata primoPiatto7 = new PrimiPiatti("Primo piatto", "Orecchiette con broccoli", 7,true, TipoPortate.VEGETARIANO);
 
-        menu.addPortata(primoPiatto1);
-        menu.addPortata(primoPiatto2);
-        menu.addPortata(primoPiatto3);
-        menu.addPortata(primoPiatto4);
-        menu.addPortata(primoPiatto5);
-        menu.addPortata(primoPiatto6);
-        menu.addPortata(primoPiatto7);
+        primiPiattiLista.add(primoPiatto1);
+        primiPiattiLista.add(primoPiatto2);
+        primiPiattiLista.add(primoPiatto3);
+        primiPiattiLista.add(primoPiatto4);
+        primiPiattiLista.add(primoPiatto5);
+        primiPiattiLista.add(primoPiatto6);
+        primiPiattiLista.add(primoPiatto7);
+        menu.aggiungereListaALMenu(primiPiattiLista);
 
         /**
          *Secondi piatti classici
          */
+
+        List<Portata> secondiPiattiLista = new ArrayList<>();
         Portata secondoPiatto1 = new SecondiPiatti("Secondo piatto" , "Fiorentina" , 15,false, TipoPortate.CLASSICO);
         Portata secondoPiatto2 = new SecondiPiatti("Secondo piatto" , "Involtini di carne" , 8,false, TipoPortate.CLASSICO);
         Portata secondoPiatto3 = new SecondiPiatti("Secondo piatto" , "Cotoletta di pollo" , 7,true, TipoPortate.CLASSICO);
@@ -99,21 +109,29 @@ public class Main {
         Portata secondoPiatto6 = new SecondiPiatti("Secondo piatto" , "Uova al tegamini con pomodoro" , 7,true, TipoPortate.VEGETARIANO);
         Portata secondoPiatto7 = new SecondiPiatti("Secondo piatto" , "Zuppa di ceci e cavolo nero" , 7,false, TipoPortate.VEGETARIANO);
 
-        menu.addPortata(secondoPiatto1);
-        menu.addPortata(secondoPiatto2);
-        menu.addPortata(secondoPiatto3);
-        menu.addPortata(secondoPiatto4);
-        menu.addPortata(secondoPiatto5);
-        menu.addPortata(secondoPiatto6);
-        menu.addPortata(secondoPiatto7);
+        secondiPiattiLista.add(secondoPiatto1);
+        secondiPiattiLista.add(secondoPiatto2);
+        secondiPiattiLista.add(secondoPiatto3);
+        secondiPiattiLista.add(secondoPiatto4);
+        secondiPiattiLista.add(secondoPiatto5);
+        secondiPiattiLista.add(secondoPiatto6);
+        secondiPiattiLista.add(secondoPiatto7);
+        menu.aggiungereListaALMenu(secondiPiattiLista);
 
+
+
+        List<Portata> dessertLista = new ArrayList<>();
         Portata dessert1 = new Dessert("Dessert", "tortini ripieni", 3,false, TipoPortate.CLASSICO);
         Portata dessert2 = new Dessert("Dessert", "torta di ciliege", 9,true, TipoPortate.CLASSICO);
         Portata dessert3 = new Dessert("Dessert", "crostata di mele", 6,false, TipoPortate.CLASSICO);
 
-        menu.addPortata(dessert1);
-        menu.addPortata(dessert2);
-        menu.addPortata(dessert3);
+        dessertLista.add(dessert1);
+        dessertLista.add(dessert2);
+        dessertLista.add(dessert3);
+        menu.aggiungereListaALMenu(dessertLista);
+
+
+
 
         Drink drink1 = new BevandaAnalcolica("Bevanda analcolica" , "Acqua" , 1, false);
         Drink drink2 = new BevandaAnalcolica("Bevanda analcolica" , "Coca-Cola" , 3, true);
