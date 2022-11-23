@@ -32,11 +32,6 @@ public class Menu {
      */
 
 
-    /**
-     * Lista delle bevande
-     */
-    private List<Drink> drinkList = new ArrayList<>();
-
     private List<Portata> portata;
 
     /**
@@ -71,9 +66,7 @@ public class Menu {
      *
      * @param drink --> parametro che richiama la classe Ristorante.FoodAndDrink.Drink
      */
-    public void addDrink(Drink drink) {
-        drinkList.add(drink);
-    }
+
 
 
 
@@ -82,7 +75,6 @@ public class Menu {
      */
     public void stampaMenu() {
         portata.forEach(System.out::println);
-        drinkList.forEach(System.out::println);
     }
 
 
@@ -103,13 +95,7 @@ public class Menu {
      * un metodo per stampare la bevanda del giorno e le relative informazioni sulla bevanda
      */
 
-    public void stampaBevandaDelGiorno(){
-        for (Drink drinkDelGiorno:drinkList) {
-            if (drinkDelGiorno.isDrinkDelGiorno()) {
-                System.out.println("Bevanda del giorno raccomandata: " + drinkDelGiorno.getType() + " = " + drinkDelGiorno.getName() + " - " + drinkDelGiorno.getPrice() + " euro ");
-            }
-        }
-    }
+
 
     /**
      * metodo che consiglia un piatto al cliente in base alle sue preferenze
@@ -155,14 +141,6 @@ public class Menu {
 
     public void setPortataList(List<Portata> portataList) {
         this.portata = portataList;
-    }
-
-    public List<Drink> getDrinkList() {
-        return drinkList;
-    }
-
-    public void setDrinkList(List<Drink> drinkList) {
-        this.drinkList = drinkList;
     }
 
 }
