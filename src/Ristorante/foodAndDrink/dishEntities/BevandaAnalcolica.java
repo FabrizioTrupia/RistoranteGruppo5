@@ -1,8 +1,8 @@
 package Ristorante.foodAndDrink.dishEntities;
 
-import Ristorante.foodAndDrink.Drink;
+
 import Ristorante.foodAndDrink.Portata;
-import Ristorante.foodAndDrink.TipoPortate;
+import Ristorante.foodAndDrink.MenuTypeEnum;
 
 /**
  * La classe che fa riferimento alle bevande analcoliche che estende la classe Ristorante.FoodAndDrink.Drink
@@ -20,7 +20,7 @@ public class BevandaAnalcolica extends Portata {
      * @param piattoDelGiorno --> piatto del giorno
      * @param tipoPortata
      */
-    public BevandaAnalcolica(String type, String name, Integer price, boolean piattoDelGiorno, TipoPortate tipoPortata) {
+    public BevandaAnalcolica(String type, String name, Integer price, boolean piattoDelGiorno, MenuTypeEnum tipoPortata) {
         super(type, name, price, piattoDelGiorno, tipoPortata);
     }
     /**

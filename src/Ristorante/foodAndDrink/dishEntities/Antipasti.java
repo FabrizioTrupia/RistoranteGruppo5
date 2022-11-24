@@ -1,7 +1,7 @@
 package Ristorante.foodAndDrink.dishEntities;
 
 import Ristorante.foodAndDrink.Portata;
-import Ristorante.foodAndDrink.TipoPortate;
+import Ristorante.foodAndDrink.MenuTypeEnum;
 
 /**
  * La classe che fa riferimento agli antipasti che estende la classe Ristorante.FoodAndDrink.Portata
@@ -16,7 +16,7 @@ public class Antipasti extends Portata {
      * @param price --> prezzo della portata Ristorante.FoodAndDrink.PortEnti.Antipasti
      * @param piattoDelGiorno --> piatto del giorno
      */
-    public Antipasti(String type, String name, Integer price, boolean piattoDelGiorno, TipoPortate tipoPortata) {
+    public Antipasti(String type, String name, Integer price, boolean piattoDelGiorno, MenuTypeEnum tipoPortata) {
         super(type, name, price,piattoDelGiorno, tipoPortata);
     }
 }

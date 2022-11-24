@@ -1,6 +1,6 @@
 package Ristorante.consumatore;
 
-import Ristorante.foodAndDrink.TipoPortate;
+import Ristorante.foodAndDrink.MenuTypeEnum;
 
 /**
  * La classe che fa riferimento ai clienti
@@ -18,7 +18,7 @@ public class Cliente {
     /**
      * gusto del cliente
      */
-    private TipoPortate gusti;
+    private MenuTypeEnum gusti;
 
     private String dataPrenotazione;
 
@@ -28,7 +28,7 @@ public class Cliente {
      * @param cognome --> cognome del cliente
      * @param gusti --> gusto del cliente
      */
-    public Cliente(String cognome, TipoPortate gusti, String dataPrenotazione) {
+    public Cliente(String cognome, MenuTypeEnum gusti, String dataPrenotazione) {
         this.dataPrenotazione = dataPrenotazione;
         this.cognome = cognome;
         this.gusti = gusti;
@@ -56,11 +56,11 @@ public class Cliente {
     }
 
 
-    public TipoPortate getGusti() {
+    public MenuTypeEnum getGusti() {
         return gusti;
     }
 
-    public void setGusti(TipoPortate gusti) {
+    public void setGusti(MenuTypeEnum gusti) {
         this.gusti = gusti;
     }
 }
