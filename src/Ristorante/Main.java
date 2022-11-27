@@ -29,11 +29,6 @@ public class Main {
         Menu menuVegano = new Menu(new ArrayList<>(), MenuTypeEnum.VEGANO);
         Menu menuVegetariano = new Menu(new ArrayList<>(), MenuTypeEnum.VEGETARIANO);
 
-
-
-
-
-
         /**
          * ANTIPASTI
          */
@@ -163,7 +158,7 @@ public class Main {
         menuClassico.aggiungiBibita(drink5);
 
 
-        menuClassico.stampaBibite();
+
 
 
 
@@ -177,25 +172,19 @@ public class Main {
         menuVegano.stampaMenuVegano();
         System.out.println("============================================================================================================================");
         menuVegetariano.stampaMenuVegetariano();
-
         System.out.println("============================================================================================================================");
-
+        menuClassico.stampaBibite();
+        System.out.println("============================================================================================================================");
         menuClassico.stampaPiattoDelGiorno();
-
         System.out.println("============================================================================================================================");
-
         menuVegano.stampaPiattoDelGiornoVegano();
-
         System.out.println("============================================================================================================================");
-
         menuVegetariano.stampaPiattoDelGiornoVegetariano();
-
         System.out.println("============================================================================================================================");
-
         menuClassico.stampaBevandaDelGiorno();
-
         System.out.println("============================================================================================================================");
 
+        System.out.println("============SEZIONE CLIENTE============");
         Cliente cliente = new Cliente("Rossi",  MenuTypeEnum.CLASSICO,"25 Dicembre 20:00");
         Cliente cliente1 = new Cliente("De paolo", MenuTypeEnum.VEGANO,"25 Dicembre 21:00");
         Cliente cliente2 = new Cliente("De luca", MenuTypeEnum.VEGETARIANO,"25 Dicembre 22:00");
