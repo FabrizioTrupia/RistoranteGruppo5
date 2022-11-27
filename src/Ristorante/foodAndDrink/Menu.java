@@ -28,30 +28,43 @@ public class Menu {
      */
     private Integer coperto;
 
-    /**
-     * Lista delle portate
-     */
 
+    /**
+     * Lista del menu
+     */
+    private List<Portata> listaMenu;
+
+
+    /**
+     * Lista delle portateMenuClassico
+     */
+    List<Portata> portateMenuClassico = new ArrayList<>();
+
+    /**
+     * Lista delle portateMenuVegano
+     */
+    List<Portata> portateMenuVegano = new ArrayList<>();
+
+    /**
+     * Lista delle portateMenuVegetariano
+     */
+    List<Portata> portateMenuVegetariano = new ArrayList<>();
 
     /**
      * Lista delle bevande
      */
-   // private List<Drink> drinkList = new ArrayList<>();
 
-    private List<Portata> portata;
-
-    List<Portata> portateMenuClassico = new ArrayList<>();
-    List<Portata> portateMenuVegano = new ArrayList<>();
-    List<Portata> portateMenuVegetariano = new ArrayList<>();
+    private List<Drink> drinkList = new ArrayList<>();
 
     private MenuTypeEnum menuTypeEnum;
 
     /**
      *
      * @param list
+     * @param menuTypeEnum
      */
     public Menu(List<Portata> list, MenuTypeEnum menuTypeEnum) {
-        this.portata = list;
+        this.listaMenu = list;
         this.menuTypeEnum=menuTypeEnum;
 
     }
@@ -68,22 +81,14 @@ public class Menu {
     }
 
 
-
-
-
+    /**
+     * metodo per aggiungere le varie liste alla lista del menu principale
+     * @param list
+     */
 
     public void aggiungereListaALMenu(List<Portata> list){
-        this.portata.addAll(list);
+        this.listaMenu.addAll(list);
     }
-    /**
-     * Un metodo che aggiunge i drink all lista "drinkList"
-     *
-     * @param drink --> parametro che richiama la classe Ristorante.FoodAndDrink.Drink
-     */
-    /*public void addDrink(Drink drink) {
-        drinkList.add(drink);
-    }*/
-
 
 
     /**
@@ -92,7 +97,7 @@ public class Menu {
     public void stampaMenuClassico() {
         System.out.println("===============MENU CLASSICO===============");
         portateMenuClassico.forEach(System.out::println);
-        //drinkList.forEach(System.out::println);
+        drinkList.forEach(System.out::println);
     }
 
     /**
@@ -114,6 +119,18 @@ public class Menu {
             System.out.println(portateVegetarianeA);
         }
     }
+
+    /**
+     * Un metodo per stampare le bibite
+     */
+    public void stampaBibite() {
+        System.out.println("===============MENU BIBITE===============");
+        for (Drink drinkList : drinkList) {
+            System.out.println(drinkList);
+        }
+
+    }
+
 
     /**
      * un metodo per aggiungere la portata alla lista Menu classico
@@ -152,6 +169,14 @@ public class Menu {
         portateMenuVegetariano.remove(portata);
     }
 
+    /**
+     * Un meto per aggiungere le bibite alla lista Drink
+     * @param drink
+     */
+    public void aggiungiBibita(Drink drink){
+        this.drinkList.add(drink);
+    }
+
 
 
 
@@ -167,6 +192,9 @@ public class Menu {
         }
     }
 
+    /**
+     * Un metodo per stampare il piatto del giorno di tipo vegano
+     */
     public void stampaPiattoDelGiornoVegano(){
         System.out.println("============PIATTO DEL GIORNO PER IL MENU VEGANO============");
         for (Portata piattoDelGiornoVegano:portateMenuVegano) {
@@ -176,6 +204,9 @@ public class Menu {
         }
     }
 
+    /**
+     * Un metodo per stampare il piatto del giorno di tipo vegetariano
+     */
     public void stampaPiattoDelGiornoVegetariano(){
         System.out.println("============PIATTO DEL GIORNO PER IL MENU VEGETARIANO============");
         for (Portata piattoDelGiornoVegetariano : portateMenuVegetariano) {
@@ -189,13 +220,14 @@ public class Menu {
      * un metodo per stampare la bevanda del giorno e le relative informazioni sulla bevanda
      */
 
-   /* public void stampaBevandaDelGiorno(){
+    public void stampaBevandaDelGiorno(){
+        System.out.println("============BEVANDA DEL GIORNO============");
         for (Drink drinkDelGiorno:drinkList) {
-            if (drinkDelGiorno.isDrinkDelGiorno()) {
+            if (drinkDelGiorno.isBevandaDelGiorno()) {
                 System.out.println("Bevanda del giorno raccomandata: " + drinkDelGiorno.getType() + " = " + drinkDelGiorno.getName() + " - " + drinkDelGiorno.getPrice() + " euro ");
             }
         }
-    }*/
+    }
 
     /**
      * metodo che consiglia un piatto al cliente in base alle sue preferenze
@@ -261,19 +293,19 @@ public class Menu {
     }
 
     public List<Portata> getPortataList() {
-        return portata;
+        return listaMenu;
     }
 
     public void setPortataList(List<Portata> portataList) {
-        this.portata = portataList;
+        this.listaMenu = portataList;
     }
 
-    /*public List<Drink> getDrinkList() {
+    public List<Drink> getDrinkList() {
         return drinkList;
     }
 
     public void setDrinkList(List<Drink> drinkList) {
         this.drinkList = drinkList;
-    }*/
+    }
 
 }

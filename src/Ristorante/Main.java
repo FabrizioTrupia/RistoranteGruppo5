@@ -33,6 +33,7 @@ public class Main {
 
 
 
+
         /**
          * ANTIPASTI
          */
@@ -147,6 +148,23 @@ public class Main {
         menuVegetariano.aggiungerePiattoVegetariano(dessert7);
         menuVegetariano.aggiungereListaALMenu(menuVegetariano.getPortateMenuVegetariano());
 
+        Drink drink = new Drink("Bevanda", "Coca-cola", 2, false);
+        Drink drink1 = new Drink("Bevanda", "Aranciata", 2, true);
+        Drink drink2 = new Drink("Bevanda", "The alla pesca o limone", 2, false);
+        Drink drink3 = new Drink("Bevanda", "Acqua liscia o gassata", 1, false);
+        Drink drink4 = new Drink("Bevanda", "Vino rosso", 7, true);
+        Drink drink5 = new Drink("Bevanda", "Vino bianco", 7, false);
+
+        menuClassico.aggiungiBibita(drink);
+        menuClassico.aggiungiBibita(drink1);
+        menuClassico.aggiungiBibita(drink2);
+        menuClassico.aggiungiBibita(drink3);
+        menuClassico.aggiungiBibita(drink4);
+        menuClassico.aggiungiBibita(drink5);
+
+
+        menuClassico.stampaBibite();
+
 
 
 
@@ -174,7 +192,7 @@ public class Main {
 
         System.out.println("============================================================================================================================");
 
-       // menuClassico.stampaBevandaDelGiorno();
+        menuClassico.stampaBevandaDelGiorno();
 
         System.out.println("============================================================================================================================");
 
