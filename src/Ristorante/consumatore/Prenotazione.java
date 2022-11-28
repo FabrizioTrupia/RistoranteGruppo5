@@ -18,8 +18,12 @@ public class Prenotazione {
     }
 
     public void aggiungerePrenotazioni(List<Cliente> clienteList) {
+
+        //Todo aggiungere un solo client o anche solo un cliente
         this.cliente.addAll(clienteList);
     }
+
+
 
     public void stampaPrenotazioni(){
     cliente.forEach(System.out::println);
