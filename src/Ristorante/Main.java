@@ -141,13 +141,13 @@ public class Main {
         clienteList.add(cliente);
         clienteList.add(cliente1);
         clienteList.add(cliente2);
-        prenotazione.aggiungerePrenotazioni(clienteList);
 
-        prenotazione.stampaPrenotazioni();
 
 
         Prenotazione prenotazione = new Prenotazione(clienteList);
+        prenotazione.aggiungerePrenotazioni(clienteList);
 
+        prenotazione.stampaPrenotazioni();
 
         Tavolo tavolo1 = new Tavolo(4);
         Tavolo tavolo2 = new Tavolo(4);

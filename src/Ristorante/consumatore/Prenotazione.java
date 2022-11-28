@@ -16,9 +16,6 @@ public class Prenotazione {
     private List<Cliente> cliente;
 
 
-    private String nominativo;
-
-
     public Prenotazione(List<Cliente> clienteList) {
         this.cliente = clienteList;
     }
@@ -31,21 +28,12 @@ public class Prenotazione {
     }
 
 
-
-    public void stampaPrenotazioni(){
-    cliente.forEach(System.out::println);
-    public void stampaPrenotazioni(Tavolo tavolo){
-
+    public void stampaPrenotazioni() {
         cliente.forEach(System.out::println);
 
-    }
-    public String getNominativo() {
-        return nominativo;
+
     }
 
-    public void setNominativo(String nominativo) {
-        this.nominativo = nominativo;
-    }
     public List<Cliente> getCliente() {
         return cliente;
     }
@@ -53,6 +41,4 @@ public class Prenotazione {
     public void setCliente(List<Cliente> cliente) {
         this.cliente = cliente;
     }
-
 }
-
