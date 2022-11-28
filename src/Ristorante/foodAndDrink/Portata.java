@@ -57,6 +57,7 @@ public class Portata {
      */
     @Override
     public String toString() {
+        //TODO il to string non serve per stampare la descrizione ma per avere un : 12342343@hascode
         return "Tipo: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro " + " Categoria: " + tipoPortata;
     }
 
