@@ -1,4 +1,6 @@
-package Ristorante.FoodAndDrink;
+package Ristorante.foodAndDrink;
+
+
 
 /**
  * La classe che fa riferimento alla portata
@@ -32,7 +34,7 @@ public class Portata {
     /**
      * tipo di menu
      */
-    private TypeMenuEnum typeMenuEnum;
+    private MenuTypeEnum tipoPortata;
 
     /**
      * Metodo costruttore della classe portata
@@ -41,12 +43,12 @@ public class Portata {
      * @param price --> prezzo del piatto
      * @param piattoDelGiorno --> piatto del giorno
      */
-    public Portata(String type, String name,Integer price, boolean piattoDelGiorno, TypeMenuEnum typeMenuEnum){
+    public Portata(String type, String name,Integer price, boolean piattoDelGiorno, MenuTypeEnum tipoPortata){
         this.type = type;
         this.name = name;
         this.price = price;
         this.piattoDelGiorno=piattoDelGiorno;
-        this.typeMenuEnum=typeMenuEnum;
+        this.tipoPortata =tipoPortata;
     }
 
     /**
@@ -55,7 +57,7 @@ public class Portata {
      */
     @Override
     public String toString() {
-        return "Tipo: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro " + " Categoria: " + typeMenuEnum;
+        return "Tipo: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro " + " Categoria: " + tipoPortata;
     }
 
     public boolean isPiattoDelGiorno(){
@@ -85,12 +87,12 @@ public class Portata {
     public void setPrice(Integer price) {
         this.price = price;
     }
-    public TypeMenuEnum getTypeMenuEnum() {
-        return typeMenuEnum;
+    public MenuTypeEnum getTipoPortata() {
+        return tipoPortata;
     }
 
-    public void setTypeMenuEnum(TypeMenuEnum typeMenuEnum) {
-        this.typeMenuEnum = typeMenuEnum;
+    public void setTipoPortata(MenuTypeEnum typeMenuEnum) {
+        this.tipoPortata = tipoPortata;
     }
 
     public void setPiattoDelGiorno(boolean piattoDelGiorno) {
