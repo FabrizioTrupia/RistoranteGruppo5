@@ -4,13 +4,9 @@ import Ristorante.consumatore.Cliente;
 import Ristorante.consumatore.Prenotazione;
 import Ristorante.foodAndDrink.*;
 
-import Ristorante.foodAndDrink.dishEntities.Antipasti;
-import Ristorante.foodAndDrink.dishEntities.Dessert;
-import Ristorante.foodAndDrink.dishEntities.PrimiPiatti;
-import Ristorante.foodAndDrink.dishEntities.SecondiPiatti;
+import Ristorante.foodAndDrink.dishEntities.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * In questa classe sono stati creati delle istanze di oggetti nelle varie classi e aggiunti alla lista
@@ -210,27 +206,32 @@ public class Main {
 
         System.out.println("============================================================================================================================");
 
-        Prenotazione prenotazione = new Prenotazione(new ArrayList<>());
+
 
         List<Cliente> clienteList = new ArrayList<>();
 
         clienteList.add(cliente);
         clienteList.add(cliente1);
         clienteList.add(cliente2);
-        prenotazione.aggiungerePrenotazioni(clienteList);
-
-        prenotazione.stampaPrenotazioni();
+        Prenotazione prenotazione = new Prenotazione(clienteList);
 
 
+        Tavolo tavolo1 = new Tavolo(4);
+        Tavolo tavolo2 = new Tavolo(4);
+        Tavolo tavolo3 = new Tavolo(4);
+        Tavolo tavolo4 = new Tavolo(4);
+        Tavolo tavolo5 = new Tavolo(4);
+
+        List<Tavolo> listaTavoli= new ArrayList<>();
+        listaTavoli.add(tavolo1);
+        listaTavoli.add(tavolo2);
+        listaTavoli.add(tavolo3);
+        listaTavoli.add(tavolo4);
+        listaTavoli.add(tavolo5);
 
 
 
-
-
-
-
-
-
-
+        tavolo1.assegnaPosti(prenotazione);
+        System.out.println(tavolo1.getClientiOccupanti().toString());
     }
 }
