@@ -58,11 +58,10 @@ public class Menu {
      * @return i parametri: type , name, coperto della classe menu
      */
 
-    @Override
-    public String toString() {
+    /*public String infoMenu() {
         //TODO
         return "Tipo di menu: " + type + " Nome del ristorante: " + name + " Coperto: " + coperto + " euro";
-    }
+    }*/
 
 
 
@@ -71,7 +70,9 @@ public class Menu {
      */
     public void stampaMenu() {
         System.out.println("===============MENU CLASSICO===============");
-        listaPortata.forEach(System.out::println);
+        for (Portata portaList:listaPortata) {
+            System.out.println(portaList.stampaInfoPortata());
+        }
     }
 
     /**
@@ -106,7 +107,7 @@ public class Menu {
         System.out.println("============================Gentile " + cliente.getCognome() + " in base alle tue preferenze abbiamo il seguente menu per te============================");
         for(Portata portata : listaPortata){
             if (cliente.getGusti() == portata.getTipoPortata()){
-                System.out.println(portata);
+                System.out.println(portata.stampaInfoPortata());
             }
         }
 

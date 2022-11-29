@@ -36,6 +36,14 @@ public class Portata {
      */
     private MenuTypeEnum tipoPortata;
 
+
+    public Portata(String type, String name,Integer price, boolean piattoDelGiorno){
+        this.type=type;
+        this.name=name;
+        this.price=price;
+        this.piattoDelGiorno=piattoDelGiorno;
+    }
+
     /**
      * Metodo costruttore della classe portata
      * @param type --> tipo della portata
@@ -55,8 +63,7 @@ public class Portata {
      * Metodo to string della classe portata
      * @return i parametri: type , name, price della classe portata
      */
-    @Override
-    public String toString() {
+    public String stampaInfoPortata() {
         //TODO il to string non serve per stampare la descrizione ma per avere un : 12342343@hascode
         return "Tipo: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro " + " Categoria: " + tipoPortata;
     }

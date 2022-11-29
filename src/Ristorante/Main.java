@@ -107,12 +107,23 @@ public class Main {
         menuClassico.addPortata(dessert7);
 
 
-        Drink drink = new Drink("Bevanda", "Coca-cola", 2, false);
-        Drink drink1 = new Drink("Bevanda", "Aranciata", 2, true);
-        Drink drink2 = new Drink("Bevanda", "The alla pesca o limone", 2, false);
-        Drink drink3 = new Drink("Bevanda", "Acqua liscia o gassata", 1, false);
-        Drink drink4 = new Drink("Bevanda", "Vino rosso", 7, true);
-        Drink drink5 = new Drink("Bevanda", "Vino bianco", 7, false);
+        Portata drink = new Drink("Bevanda", "Acqua liscia o gassata", 1,false);
+        Portata drink1 = new Drink("Bevanda", "Coca-cola", 2, false);
+        Portata drink2 = new Drink("Bevanda", "Aranciata", 2, false);
+        Portata drink3 = new Drink("Bevanda", "The alla pesca o al limone", 2,false);
+        Portata drink4 = new Drink("Bevanda_Vegana", "Bergamotto bio", 3, false);
+        Portata drink5 = new Drink("Bevanda_Vegana", "Ginger_Bio", 3, false);
+        Portata drink6 = new Drink("Bevanda_Vegetariana", "Mix di frutta esotica", 5, false);
+        Portata drink7 = new Drink("Bevanda_Vegetariana", "Latte di cocco e mandorla", 7, false);
+
+        menuClassico.addPortata(drink);
+        menuClassico.addPortata(drink1);
+        menuClassico.addPortata(drink2);
+        menuClassico.addPortata(drink3);
+        menuClassico.addPortata(drink4);
+        menuClassico.addPortata(drink5);
+        menuClassico.addPortata(drink6);
+        menuClassico.addPortata(drink7);
 
 
 
@@ -134,6 +145,8 @@ public class Main {
         cliente2.infoCliente();
 
 
+        menuClassico.stampaPiattoInBaseAlCliente(cliente);
+        System.out.println("=============================================================================");
 
 
         List<Cliente> clienteList = new ArrayList<>();
