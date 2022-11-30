@@ -107,14 +107,14 @@ public class Main {
         menuClassico.addPortata(dessert7);
 
 
-        Portata drink = new Drink("Bevanda", "Acqua liscia o gassata", 1,false);
-        Portata drink1 = new Drink("Bevanda", "Coca-cola", 2, false);
-        Portata drink2 = new Drink("Bevanda", "Aranciata", 2, false);
-        Portata drink3 = new Drink("Bevanda", "The alla pesca o al limone", 2,false);
-        Portata drink4 = new Drink("Bevanda_Vegana", "Bergamotto bio", 3, false);
-        Portata drink5 = new Drink("Bevanda_Vegana", "Ginger_Bio", 3, false);
-        Portata drink6 = new Drink("Bevanda_Vegetariana", "Mix di frutta esotica", 5, false);
-        Portata drink7 = new Drink("Bevanda_Vegetariana", "Latte di cocco e mandorla", 7, false);
+        Portata drink = new Portata("Bevanda", "Acqua liscia o gassata", 1,false);
+        Portata drink1 = new Portata("Bevanda", "Coca-cola", 2, false);
+        Portata drink2 = new Portata("Bevanda", "Aranciata", 2, false);
+        Portata drink3 = new Portata("Bevanda", "The alla pesca o al limone", 2,false);
+        Portata drink4 = new Portata("Bevanda_Vegana", "Bergamotto bio", 3, false);
+        Portata drink5 = new Portata("Bevanda_Vegana", "Ginger_Bio", 3, false);
+        Portata drink6 = new Portata("Bevanda_Vegetariana", "Mix di frutta esotica", 5, false);
+        Portata drink7 = new Portata("Bevanda_Vegetariana", "Latte di cocco e mandorla", 7, false);
 
         menuClassico.addPortata(drink);
         menuClassico.addPortata(drink1);
@@ -179,5 +179,6 @@ public class Main {
 
         tavolo1.assegnaPosti(prenotazione);
         System.out.println(tavolo1.getClientiOccupanti().toString());
+
     }
 }
