@@ -10,7 +10,7 @@ public class Drink extends Portata{
 
     @Override
     public String stampaInfoPortata() {
-        return "Tipo bevanda: " + getType() + " Nome della bevanda " + getName() + " Prezzo della bevanda " + getPrice();
+        return "Tipo: " + getType() + " Nome " + getName() + " Prezzo" + getPrice();
     }
 }
 

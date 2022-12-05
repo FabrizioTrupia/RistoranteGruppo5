@@ -39,79 +39,13 @@ public class Menu {
      */
     private List<Portata> listaPortata = new ArrayList<>();
 
-    private MenuTypeEnum menuTypeEnum;
 
     /**
-     *
+     * Metodo costruttore classe Menu
      * @param list
-     * @param menuTypeEnum
      */
-    public Menu(List<Portata> list, MenuTypeEnum menuTypeEnum) {
+    public Menu(List<Portata> list) {
         this.listaMenu = list;
-        this.menuTypeEnum=menuTypeEnum;
-
-    }
-
-    /**
-     * Metodo to string della classe menu
-     *
-     * @return i parametri: type , name, coperto della classe menu
-     */
-
-    /*public String infoMenu() {
-        //TODO
-        return "Tipo di menu: " + type + " Nome del ristorante: " + name + " Coperto: " + coperto + " euro";
-    }*/
-
-
-
-    /**
-     * Un metodo per stampare il menu classico
-     */
-    public void stampaMenu() {
-        System.out.println("===============MENU CLASSICO===============");
-        for (Portata portaList:listaPortata) {
-            System.out.println(portaList.stampaInfoPortata());
-        }
-    }
-
-    /**
-     * un metodo per aggiungere la portata alla lista Menu classico
-     * @param portata
-     */
-    public void addPortata(Portata portata){
-        listaPortata.add(portata);
-    }
-
-
-
-    /**
-     * un metodo per stampare il piatto del giorno e le relative informazioni del piatto
-     */
-    public void stampaPiattoDelGiorno() {
-        System.out.println("============PIATTO DEL GIORNO PER IL MENU CLASSICO============");
-        for (Portata piattoDelGiorno : listaPortata) {
-            if (piattoDelGiorno.isPiattoDelGiorno()) {
-                System.out.println("Piatto del giorno raccomandato: " + piattoDelGiorno.getType() + " = " + piattoDelGiorno.getName() + " - " + piattoDelGiorno.getPrice() + " euro " + "Tipo: " + piattoDelGiorno.getTipoPortata());
-            }
-        }
-    }
-
-
-
-    /**
-     * metodo che consiglia un piatto al cliente in base alle sue preferenze
-     * @param cliente
-     */
-    public void stampaPiattoInBaseAlCliente(Cliente cliente){
-        System.out.println("============================Gentile " + cliente.getCognome() + " in base alle tue preferenze abbiamo il seguente menu per te============================");
-        for(Portata portata : listaPortata){
-            if (cliente.getGusti() == portata.getTipoPortata()){
-                System.out.println(portata.stampaInfoPortata());
-            } else if (portata.getTipoPortata()==null){
-                System.out.println(portata.stampaInfoPortata());
-            }
-        }
     }
 
     public String getType() {
@@ -145,6 +79,55 @@ public class Menu {
     public void setPortataList(List<Portata> portataList) {
         this.listaMenu = portataList;
     }
+
+
+    /**
+     * Un metodo per stampare il menu
+     */
+    public void stampaMenu() {
+        System.out.println("===============  MENU  ===============");
+        for (Portata portaList:listaPortata) {
+            System.out.println(portaList.stampaInfoPortata());
+        }
+    }
+
+    /**
+     * un metodo per aggiungere la portata alla lista Menu classico
+     * @param portata
+     */
+    public void addPortata(Portata portata){
+        listaPortata.add(portata);
+    }
+
+
+    /**
+     * un metodo per stampare il piatto del giorno e le relative informazioni del piatto
+     */
+    public void stampaPiattoDelGiorno() {
+        System.out.println("==============PIATTO DEL GIORNO==============");
+        for (Portata piattoDelGiorno : listaPortata) {
+            if (piattoDelGiorno.isPiattoDelGiorno()) {
+                System.out.println("Piatto del giorno raccomandato: " + piattoDelGiorno.getType() + " = " + piattoDelGiorno.getName() + " - " + piattoDelGiorno.getPrice() + " euro ");
+            }
+        }
+    }
+
+    /**
+     * metodo che consiglia un piatto al cliente in base alle preferenze del cliente
+     * @param cliente
+     */
+    public void stampaPiattoInBaseAlCliente(Cliente cliente){
+        System.out.println("Gentile " + cliente.getCognome() + " in base alle tue preferenze abbiamo il seguente menu per te");
+        for(Portata portata : listaPortata){
+            if (cliente.getGusti() == portata.getTipoPortata()){
+                System.out.println(portata.stampaInfoPortata());
+            } else if (portata.getTipoPortata()==null){
+                System.out.println(portata.stampaInfoPortata());
+            }
+        }
+    }
+
+
 
 
 }

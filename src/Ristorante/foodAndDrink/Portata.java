@@ -1,7 +1,5 @@
 package Ristorante.foodAndDrink;
 
-
-
 /**
  * La classe che fa riferimento alla portata
  * @author Fabrizio Trupia , Alessandro Trupia , Nicola Boniello , Andrea Sciscioli
@@ -36,11 +34,10 @@ public class Portata {
      */
     private MenuTypeEnum tipoPortata;
 
-
     public Portata(String type, String name,Integer price, boolean piattoDelGiorno){
-        this.type=type;
-        this.name=name;
-        this.price=price;
+        this.type = type;
+        this.name = name;
+        this.price = price;
         this.piattoDelGiorno=piattoDelGiorno;
     }
 
@@ -57,15 +54,6 @@ public class Portata {
         this.price = price;
         this.piattoDelGiorno=piattoDelGiorno;
         this.tipoPortata =tipoPortata;
-    }
-
-    /**
-     * Metodo to string della classe portata
-     * @return i parametri: type , name, price della classe portata
-     */
-    public String stampaInfoPortata() {
-        //TODO il to string non serve per stampare la descrizione ma per avere un : 12342343@hascode
-        return "Tipo: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro " + " Categoria: " + tipoPortata;
     }
 
     public boolean isPiattoDelGiorno(){
@@ -106,4 +94,13 @@ public class Portata {
     public void setPiattoDelGiorno(boolean piattoDelGiorno) {
         this.piattoDelGiorno = piattoDelGiorno;
     }
+
+    /**
+     * Metodo che stampa le info della portata
+     */
+    public String stampaInfoPortata() {
+        return "Tipo: " + type + " , Nome del piatto: " + name + " , Prezzo: " + price + " euro " + " Categoria: " + tipoPortata;
+    }
+
+
 }

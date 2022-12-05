@@ -1,7 +1,5 @@
 package Ristorante.consumatore;
 
-import Ristorante.foodAndDrink.dishEntities.Tavolo;
-
 import java.util.List;
 
 /**
