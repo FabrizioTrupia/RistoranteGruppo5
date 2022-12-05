@@ -121,8 +121,6 @@ public class Menu {
         for(Portata portata : listaPortata){
             if (cliente.getGusti() == portata.getTipoPortata()){
                 System.out.println(portata.stampaInfoPortata());
-            } else if (portata.getTipoPortata()==null){
-                System.out.println(portata.stampaInfoPortata());
             }
         }
     }

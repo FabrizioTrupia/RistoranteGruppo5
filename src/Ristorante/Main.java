@@ -9,6 +9,8 @@ import Ristorante.foodAndDrink.dishEntities.Dessert;
 import Ristorante.foodAndDrink.dishEntities.PrimiPiatti;
 import Ristorante.foodAndDrink.dishEntities.SecondiPiatti;
 
+import Ristorante.foodAndDrink.dishEntities.*;
+
 import java.util.*;
 
 /**
@@ -47,7 +49,7 @@ public class Main {
         menu.addPortata(antipasto7);
 
         /**
-         * Primi piatti
+         * PRIMI PIATTI
          */
         Portata primoPiatto1 = new PrimiPiatti("Primo piatto", "Spaghetti alla carbonara", 11,true, MenuTypeEnum.CLASSICO);
         Portata primoPiatto2 = new PrimiPiatti("Primo piatto", "Rigatoni alla bolognese", 9,false, MenuTypeEnum.CLASSICO);
@@ -90,8 +92,10 @@ public class Main {
         Portata dessert1 = new Dessert("Dessert", "tortini ripieni", 3,false, MenuTypeEnum.CLASSICO);
         Portata dessert2 = new Dessert("Dessert", "torta di ciliege", 9,true, MenuTypeEnum.CLASSICO);
         Portata dessert3 = new Dessert("Dessert", "crostata di mele", 6,false, MenuTypeEnum.CLASSICO);
+
         Portata dessert4 = new Dessert("Dessert", "Plumcake marmorizzato vegan al cioccolato e vaniglia", 4, true, MenuTypeEnum.VEGANO);
         Portata dessert5 = new Dessert("Dessert", "Torta di mele vegan", 5, false, MenuTypeEnum.VEGANO);
+
         Portata dessert6 = new Dessert("Dessert", "Plumcake fragole e mascarpone", 4, false, MenuTypeEnum.VEGETARIANO);
         Portata dessert7 = new Dessert("Dessert", "Muffin al cioccolato", 3, true, MenuTypeEnum.VEGETARIANO);
 
@@ -103,17 +107,15 @@ public class Main {
         menu.addPortata(dessert6);
         menu.addPortata(dessert7);
 
-        /**
-         * Drink
-         */
-        Drink drink = new Drink("Bevanda", "Acqua liscia o gassata", 1,false);
-        Drink drink1 = new Drink("Bevanda", "Coca-cola", 2, false);
-        Drink drink2 = new Drink("Bevanda", "Aranciata", 2, false);
-        Drink drink3 = new Drink("Bevanda", "The alla pesca o al limone", 2,false);
-        Drink drink4 = new Drink("Bevanda_Vegana", "Bergamotto bio", 3, false);
-        Drink drink5 = new Drink("Bevanda_Vegana", "Ginger_Bio", 3, false);
-        Drink drink6 = new Drink("Bevanda_Vegetariana", "Mix di frutta esotica", 5, false);
-        Drink drink7 = new Drink("Bevanda_Vegetariana", "Latte di cocco e mandorla", 7, false);
+
+        Portata drink = new Portata("Bevanda", "Acqua liscia o gassata", 1,false, MenuTypeEnum.CLASSICO);
+        Portata drink1 = new Portata("Bevanda", "Coca-cola", 2, false, MenuTypeEnum.CLASSICO);
+        Portata drink2 = new Portata("Bevanda", "Aranciata", 2, false, MenuTypeEnum.CLASSICO);
+        Portata drink3 = new Portata("Bevanda", "The alla pesca o al limone", 2,false,MenuTypeEnum.CLASSICO);
+        Portata drink4 = new Portata("Bevanda_Vegana", "Bergamotto bio", 3, false, MenuTypeEnum.VEGANO);
+        Portata drink5 = new Portata("Bevanda_Vegana", "Ginger_Bio", 3, false, MenuTypeEnum.VEGANO);
+        Portata drink6 = new Portata("Bevanda_Vegetariana", "Mix di frutta esotica", 5, false, MenuTypeEnum.VEGETARIANO);
+        Portata drink7 = new Portata("Bevanda_Vegetariana", "Latte di cocco e mandorla", 7, false, MenuTypeEnum.VEGETARIANO);
 
         menu.addPortata(drink);
         menu.addPortata(drink1);
@@ -138,11 +140,11 @@ public class Main {
         Cliente cliente1 = new Cliente("De paolo", MenuTypeEnum.VEGANO,"25 Dicembre 21:00");
         Cliente cliente2 = new Cliente("De luca", MenuTypeEnum.VEGETARIANO,"25 Dicembre 22:00");
 
+
         cliente.infoCliente();
         cliente1.infoCliente();
         cliente2.infoCliente();
 
-        System.out.println("============================================================================================================================");
 
         menu.stampaPiattoInBaseAlCliente(cliente);
         System.out.println("============================================================================================================================");
@@ -158,16 +160,18 @@ public class Main {
         clienteList.add(cliente1);
         clienteList.add(cliente2);
 
+
+
         Prenotazione prenotazione = new Prenotazione(clienteList);
         prenotazione.aggiungerePrenotazioni(clienteList);
 
         prenotazione.stampaPrenotazioni();
 
-        Tavolo tavolo1 = new Tavolo(4);
-        Tavolo tavolo2 = new Tavolo(4);
-        Tavolo tavolo3 = new Tavolo(4);
-        Tavolo tavolo4 = new Tavolo(4);
-        Tavolo tavolo5 = new Tavolo(4);
+        Tavolo tavolo1 = new Tavolo(EnumTavoli.MEDIO);
+        Tavolo tavolo2 = new Tavolo(EnumTavoli.MEDIO);
+        Tavolo tavolo3 = new Tavolo(EnumTavoli.GRANDE);
+        Tavolo tavolo4 = new Tavolo(EnumTavoli.PICCOLO);
+        Tavolo tavolo5 = new Tavolo(EnumTavoli.PICCOLO);
 
         List<Tavolo> listaTavoli= new ArrayList<>();
         listaTavoli.add(tavolo1);
@@ -175,6 +179,8 @@ public class Main {
         listaTavoli.add(tavolo3);
         listaTavoli.add(tavolo4);
         listaTavoli.add(tavolo5);
+
+
 
         tavolo1.assegnaPosti(prenotazione);
         System.out.println(tavolo1.getClientiOccupanti().toString());
