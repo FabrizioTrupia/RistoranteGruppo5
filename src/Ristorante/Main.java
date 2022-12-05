@@ -2,15 +2,14 @@ package Ristorante;
 
 import Ristorante.consumatore.Cliente;
 import Ristorante.consumatore.Prenotazione;
+import Ristorante.consumatore.Tavolo;
 import Ristorante.foodAndDrink.*;
-
 import Ristorante.foodAndDrink.dishEntities.Antipasti;
 import Ristorante.foodAndDrink.dishEntities.Dessert;
 import Ristorante.foodAndDrink.dishEntities.PrimiPiatti;
 import Ristorante.foodAndDrink.dishEntities.SecondiPiatti;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * In questa classe sono stati creati delle istanze di oggetti nelle varie classi e aggiunti alla lista
@@ -25,9 +24,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Menu menuClassico = new Menu(new ArrayList<>(), MenuTypeEnum.CLASSICO.CLASSICO);
-        Menu menuVegano = new Menu(new ArrayList<>(), MenuTypeEnum.VEGANO);
-        Menu menuVegetariano = new Menu(new ArrayList<>(), MenuTypeEnum.VEGETARIANO);
+        Menu menu = new Menu(new ArrayList<>());
+
 
         /**
          * ANTIPASTI
@@ -40,26 +38,16 @@ public class Main {
         Portata antipasto6 = new Antipasti("Antipasto", "Bruschette con pomodoro", 8,false, MenuTypeEnum.VEGETARIANO);
         Portata antipasto7 = new Antipasti("Antipasto", "Grigliata di verdura mista", 8,true, MenuTypeEnum.VEGETARIANO);
 
-        menuClassico.aggiungerePiattoClassico(antipasto1);
-        menuClassico.aggiungerePiattoClassico(antipasto2);
-        menuClassico.aggiungerePiattoClassico(antipasto3);
-        menuClassico.aggiungerePiattoClassico(antipasto4);
-        menuClassico.aggiungerePiattoClassico(antipasto5);
-        menuClassico.aggiungerePiattoClassico(antipasto6);
-        menuClassico.aggiungerePiattoClassico(antipasto7);
-        menuClassico.aggiungereListaALMenu(menuClassico.getPortateMenuClassico());
-
-        menuVegano.aggiungerePiattoVegano(antipasto4);
-        menuVegano.aggiungerePiattoVegano(antipasto5);
-        menuVegano.aggiungereListaALMenu(menuVegano.getPortateMenuVegano());
-
-        menuVegetariano.aggiungerePiattoVegetariano(antipasto6);
-        menuVegetariano.aggiungerePiattoVegetariano(antipasto7);
-        menuVegetariano.aggiungereListaALMenu(menuVegetariano.getPortateMenuVegetariano());
-
+        menu.addPortata(antipasto1);
+        menu.addPortata(antipasto2);
+        menu.addPortata(antipasto3);
+        menu.addPortata(antipasto4);
+        menu.addPortata(antipasto5);
+        menu.addPortata(antipasto6);
+        menu.addPortata(antipasto7);
 
         /**
-         * PRIMI PIATTI
+         * Primi piatti
          */
         Portata primoPiatto1 = new PrimiPiatti("Primo piatto", "Spaghetti alla carbonara", 11,true, MenuTypeEnum.CLASSICO);
         Portata primoPiatto2 = new PrimiPiatti("Primo piatto", "Rigatoni alla bolognese", 9,false, MenuTypeEnum.CLASSICO);
@@ -69,25 +57,17 @@ public class Main {
         Portata primoPiatto6 = new PrimiPiatti("Primo piatto", "Lasagna zucchine, speck e besciamella", 10,false, MenuTypeEnum.VEGETARIANO);
         Portata primoPiatto7 = new PrimiPiatti("Primo piatto", "Orecchiette con broccoli", 7,true, MenuTypeEnum.VEGETARIANO);
 
-        menuClassico.aggiungerePiattoClassico(primoPiatto1);
-        menuClassico.aggiungerePiattoClassico(primoPiatto2);
-        menuClassico.aggiungerePiattoClassico(primoPiatto3);
-        menuClassico.aggiungerePiattoClassico(primoPiatto4);
-        menuClassico.aggiungerePiattoClassico(primoPiatto5);
-        menuClassico.aggiungerePiattoClassico(primoPiatto6);
-        menuClassico.aggiungerePiattoClassico(primoPiatto7);
-        menuClassico.aggiungereListaALMenu(menuClassico.getPortateMenuClassico());
+        menu.addPortata(primoPiatto1);
+        menu.addPortata(primoPiatto2);
+        menu.addPortata(primoPiatto3);
+        menu.addPortata(primoPiatto4);
+        menu.addPortata(primoPiatto5);
+        menu.addPortata(primoPiatto6);
+        menu.addPortata(primoPiatto7);
 
-        menuVegano.aggiungerePiattoVegano(primoPiatto4);
-        menuVegano.aggiungerePiattoVegano(primoPiatto5);
-        menuVegano.aggiungereListaALMenu(menuVegano.getPortateMenuVegano());
-
-        menuVegetariano.aggiungerePiattoVegetariano(primoPiatto6);
-        menuVegetariano.aggiungerePiattoVegetariano(primoPiatto7);
-        menuVegetariano.aggiungereListaALMenu(menuVegetariano.getPortateMenuVegetariano());
-
-
-
+        /**
+         * Secondi Piatti
+         */
         Portata secondoPiatto1 = new SecondiPiatti("Secondo piatto" , "Fiorentina" , 15,false, MenuTypeEnum.CLASSICO);
         Portata secondoPiatto2 = new SecondiPiatti("Secondo piatto" , "Involtini di carne" , 8,false, MenuTypeEnum.CLASSICO);
         Portata secondoPiatto3 = new SecondiPiatti("Secondo piatto" , "Cotoletta di pollo" , 7,true, MenuTypeEnum.CLASSICO);
@@ -96,99 +76,67 @@ public class Main {
         Portata secondoPiatto6 = new SecondiPiatti("Secondo piatto" , "Uova al tegamini con pomodoro" , 7,true, MenuTypeEnum.VEGETARIANO);
         Portata secondoPiatto7 = new SecondiPiatti("Secondo piatto" , "Zuppa di ceci e cavolo nero" , 7,false, MenuTypeEnum.VEGETARIANO);
 
-        menuClassico.aggiungerePiattoClassico(secondoPiatto1);
-        menuClassico.aggiungerePiattoClassico(secondoPiatto2);
-        menuClassico.aggiungerePiattoClassico(secondoPiatto3);
-        menuClassico.aggiungerePiattoClassico(secondoPiatto4);
-        menuClassico.aggiungerePiattoClassico(secondoPiatto5);
-        menuClassico.aggiungerePiattoClassico(secondoPiatto6);
-        menuClassico.aggiungerePiattoClassico(secondoPiatto7);
-        menuClassico.aggiungereListaALMenu(menuClassico.getPortateMenuClassico());
+        menu.addPortata(secondoPiatto1);
+        menu.addPortata(secondoPiatto2);
+        menu.addPortata(secondoPiatto3);
+        menu.addPortata(secondoPiatto4);
+        menu.addPortata(secondoPiatto5);
+        menu.addPortata(secondoPiatto6);
+        menu.addPortata(secondoPiatto7);
 
-        menuVegano.aggiungerePiattoVegano(secondoPiatto4);
-        menuVegano.aggiungerePiattoVegano(secondoPiatto5);
-        menuVegano.aggiungereListaALMenu(menuVegano.getPortateMenuVegano());
-
-        menuVegetariano.aggiungerePiattoVegetariano(secondoPiatto6);
-        menuVegetariano.aggiungerePiattoVegetariano(secondoPiatto7);
-        menuVegetariano.aggiungereListaALMenu(menuVegetariano.getPortateMenuVegetariano());
-
-
-
-
+        /**
+         * Dessert
+         */
         Portata dessert1 = new Dessert("Dessert", "tortini ripieni", 3,false, MenuTypeEnum.CLASSICO);
         Portata dessert2 = new Dessert("Dessert", "torta di ciliege", 9,true, MenuTypeEnum.CLASSICO);
         Portata dessert3 = new Dessert("Dessert", "crostata di mele", 6,false, MenuTypeEnum.CLASSICO);
-
         Portata dessert4 = new Dessert("Dessert", "Plumcake marmorizzato vegan al cioccolato e vaniglia", 4, true, MenuTypeEnum.VEGANO);
         Portata dessert5 = new Dessert("Dessert", "Torta di mele vegan", 5, false, MenuTypeEnum.VEGANO);
-
         Portata dessert6 = new Dessert("Dessert", "Plumcake fragole e mascarpone", 4, false, MenuTypeEnum.VEGETARIANO);
         Portata dessert7 = new Dessert("Dessert", "Muffin al cioccolato", 3, true, MenuTypeEnum.VEGETARIANO);
 
-        menuClassico.aggiungerePiattoClassico(dessert1);
-        menuClassico.aggiungerePiattoClassico(dessert2);
-        menuClassico.aggiungerePiattoClassico(dessert3);
-        menuClassico.aggiungerePiattoClassico(dessert4);
-        menuClassico.aggiungerePiattoClassico(dessert5);
-        menuClassico.aggiungerePiattoClassico(dessert6);
-        menuClassico.aggiungerePiattoClassico(dessert7);
-        menuClassico.aggiungereListaALMenu(menuClassico.getPortateMenuClassico());
+        menu.addPortata(dessert1);
+        menu.addPortata(dessert2);
+        menu.addPortata(dessert3);
+        menu.addPortata(dessert4);
+        menu.addPortata(dessert5);
+        menu.addPortata(dessert6);
+        menu.addPortata(dessert7);
 
-        menuVegano.aggiungerePiattoVegano(dessert4);
-        menuVegano.aggiungerePiattoVegano(dessert5);
-        menuVegano.aggiungereListaALMenu(menuVegano.getPortateMenuVegano());
+        /**
+         * Drink
+         */
+        Drink drink = new Drink("Bevanda", "Acqua liscia o gassata", 1,false);
+        Drink drink1 = new Drink("Bevanda", "Coca-cola", 2, false);
+        Drink drink2 = new Drink("Bevanda", "Aranciata", 2, false);
+        Drink drink3 = new Drink("Bevanda", "The alla pesca o al limone", 2,false);
+        Drink drink4 = new Drink("Bevanda_Vegana", "Bergamotto bio", 3, false);
+        Drink drink5 = new Drink("Bevanda_Vegana", "Ginger_Bio", 3, false);
+        Drink drink6 = new Drink("Bevanda_Vegetariana", "Mix di frutta esotica", 5, false);
+        Drink drink7 = new Drink("Bevanda_Vegetariana", "Latte di cocco e mandorla", 7, false);
 
-        menuVegetariano.aggiungerePiattoVegetariano(dessert6);
-        menuVegetariano.aggiungerePiattoVegetariano(dessert7);
-        menuVegetariano.aggiungereListaALMenu(menuVegetariano.getPortateMenuVegetariano());
-
-        Drink drink = new Drink("Bevanda", "Coca-cola", 2, false);
-        Drink drink1 = new Drink("Bevanda", "Aranciata", 2, true);
-        Drink drink2 = new Drink("Bevanda", "The alla pesca o limone", 2, false);
-        Drink drink3 = new Drink("Bevanda", "Acqua liscia o gassata", 1, false);
-        Drink drink4 = new Drink("Bevanda", "Vino rosso", 7, true);
-        Drink drink5 = new Drink("Bevanda", "Vino bianco", 7, false);
-
-        menuClassico.aggiungiBibita(drink);
-        menuClassico.aggiungiBibita(drink1);
-        menuClassico.aggiungiBibita(drink2);
-        menuClassico.aggiungiBibita(drink3);
-        menuClassico.aggiungiBibita(drink4);
-        menuClassico.aggiungiBibita(drink5);
-
-
-
-
-
-
-
+        menu.addPortata(drink);
+        menu.addPortata(drink1);
+        menu.addPortata(drink2);
+        menu.addPortata(drink3);
+        menu.addPortata(drink4);
+        menu.addPortata(drink5);
+        menu.addPortata(drink6);
+        menu.addPortata(drink7);
 
 
 
         System.out.println("============================================================================================================================");
-        menuClassico.stampaMenuClassico();
+        menu.stampaMenu();
         System.out.println("============================================================================================================================");
-        menuVegano.stampaMenuVegano();
+        menu.stampaPiattoDelGiorno();
         System.out.println("============================================================================================================================");
-        menuVegetariano.stampaMenuVegetariano();
-        System.out.println("============================================================================================================================");
-        menuClassico.stampaBibite();
-        System.out.println("============================================================================================================================");
-        menuClassico.stampaPiattoDelGiorno();
-        System.out.println("============================================================================================================================");
-        menuVegano.stampaPiattoDelGiornoVegano();
-        System.out.println("============================================================================================================================");
-        menuVegetariano.stampaPiattoDelGiornoVegetariano();
-        System.out.println("============================================================================================================================");
-        menuClassico.stampaBevandaDelGiorno();
-        System.out.println("============================================================================================================================");
+
 
         System.out.println("============SEZIONE CLIENTE============");
         Cliente cliente = new Cliente("Rossi",  MenuTypeEnum.CLASSICO,"25 Dicembre 20:00");
         Cliente cliente1 = new Cliente("De paolo", MenuTypeEnum.VEGANO,"25 Dicembre 21:00");
         Cliente cliente2 = new Cliente("De luca", MenuTypeEnum.VEGETARIANO,"25 Dicembre 22:00");
-
 
         cliente.infoCliente();
         cliente1.infoCliente();
@@ -196,41 +144,40 @@ public class Main {
 
         System.out.println("============================================================================================================================");
 
-        menuClassico.stampaPiattoInBaseAlCliente(cliente);
-
+        menu.stampaPiattoInBaseAlCliente(cliente);
+        System.out.println("============================================================================================================================");
+        menu.stampaPiattoInBaseAlCliente(cliente1);
+        System.out.println("============================================================================================================================");
+        menu.stampaPiattoInBaseAlCliente(cliente2);
         System.out.println("============================================================================================================================");
 
-
-        menuClassico.stampaPiattoInBaseAlCliente(cliente1);
-
-        System.out.println("============================================================================================================================");
-
-
-        menuClassico.stampaPiattoInBaseAlCliente(cliente2);
-
-        System.out.println("============================================================================================================================");
-
-        Prenotazione prenotazione = new Prenotazione(new ArrayList<>());
 
         List<Cliente> clienteList = new ArrayList<>();
 
         clienteList.add(cliente);
         clienteList.add(cliente1);
         clienteList.add(cliente2);
+
+        Prenotazione prenotazione = new Prenotazione(clienteList);
         prenotazione.aggiungerePrenotazioni(clienteList);
 
         prenotazione.stampaPrenotazioni();
 
+        Tavolo tavolo1 = new Tavolo(4);
+        Tavolo tavolo2 = new Tavolo(4);
+        Tavolo tavolo3 = new Tavolo(4);
+        Tavolo tavolo4 = new Tavolo(4);
+        Tavolo tavolo5 = new Tavolo(4);
 
+        List<Tavolo> listaTavoli= new ArrayList<>();
+        listaTavoli.add(tavolo1);
+        listaTavoli.add(tavolo2);
+        listaTavoli.add(tavolo3);
+        listaTavoli.add(tavolo4);
+        listaTavoli.add(tavolo5);
 
-
-
-
-
-
-
-
-
+        tavolo1.assegnaPosti(prenotazione);
+        System.out.println(tavolo1.getClientiOccupanti().toString());
 
     }
 }

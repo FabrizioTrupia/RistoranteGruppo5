@@ -13,17 +13,30 @@ public class Prenotazione {
 
     private List<Cliente> cliente;
 
+
     public Prenotazione(List<Cliente> clienteList) {
         this.cliente = clienteList;
     }
 
     public void aggiungerePrenotazioni(List<Cliente> clienteList) {
+
+        //Todo aggiungere un solo client o anche solo un cliente
         this.cliente.addAll(clienteList);
+        cliente.addAll(clienteList);
     }
 
-    public void stampaPrenotazioni(){
-    cliente.forEach(System.out::println);
+
+    public void stampaPrenotazioni() {
+        cliente.forEach(System.out::println);
+
+
     }
 
+    public List<Cliente> getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(List<Cliente> cliente) {
+        this.cliente = cliente;
+    }
 }
-
