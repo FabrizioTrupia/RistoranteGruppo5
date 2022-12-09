@@ -1,4 +1,4 @@
-package Ristorante.foodAndDrink;
+package Ristorante.enums;
 
 public enum EnumTavoli {
     GRANDE(8),

@@ -117,7 +117,8 @@ public class Menu {
      * @param cliente
      */
     public void stampaPiattoInBaseAlCliente(Cliente cliente){
-        System.out.println("Gentile " + cliente.getCognome() + " in base alle tue preferenze abbiamo il seguente menu per te");
+        System.out.println("Gentile " + cliente.getCognome()
+                + " in base alle tue preferenze abbiamo il seguente menu per te");
         for(Portata portata : listaPortata){
             if (cliente.getGusti() == portata.getTipoPortata()){
                 System.out.println(portata.stampaInfoPortata());

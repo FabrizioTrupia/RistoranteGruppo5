@@ -1,6 +1,6 @@
 package Ristorante.consumatore;
 
-import Ristorante.foodAndDrink.MenuTypeEnum;
+import Ristorante.enums.MenuTypeEnum;
 
 /**
  * La classe che fa riferimento ai clienti
@@ -19,7 +19,7 @@ public class Cliente {
      * gusto del cliente
      */
     private MenuTypeEnum gusti;
-
+//TODO rimuovere data prenotazione che dovrebbe essere in Prenotazione
     private String dataPrenotazione;
 
 
@@ -38,15 +38,6 @@ public class Cliente {
     public String toString() {
         return "Prenotazione cliente : " + cognome + ". Data prenotazione : " + dataPrenotazione;
     }
-
-    /**
-     * Metodo info cliente
-     */
-    public void infoCliente() {
-        System.out.println("Cliente: " + getCognome() + " Gusto cliente: " + getGusti());
-    }
-
-
     public String getCognome() {
         return cognome;
     }
@@ -55,7 +46,6 @@ public class Cliente {
         this.cognome = cognome;
     }
 
-
     public MenuTypeEnum getGusti() {
         return gusti;
     }
@@ -63,4 +53,14 @@ public class Cliente {
     public void setGusti(MenuTypeEnum gusti) {
         this.gusti = gusti;
     }
+
+    /**
+     * Metodo info cliente
+     */
+    public void infoCliente() {
+        System.out.println("Cliente: " + this.cognome + " Gusto cliente: " + this.gusti);
+    }
+
+
+
 }

@@ -1,7 +1,7 @@
 package Ristorante.foodAndDrink.dishEntities;
 
 
-import Ristorante.foodAndDrink.MenuTypeEnum;
+import Ristorante.enums.MenuTypeEnum;
 import Ristorante.foodAndDrink.Portata;
 
 public class Drink extends Portata {

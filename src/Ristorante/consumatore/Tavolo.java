@@ -1,8 +1,6 @@
 package Ristorante.consumatore;
 
-import Ristorante.consumatore.Cliente;
-import Ristorante.consumatore.Prenotazione;
-import Ristorante.foodAndDrink.EnumTavoli;
+import Ristorante.enums.EnumTavoli;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,20 +8,21 @@ import java.util.List;
 
 public class Tavolo {
     private EnumTavoli tipoTavolo;
+    //TODO aggiungere id tavolo e rimuovere la lista cliente
     private List<Cliente> clientiOccupanti = new ArrayList<>();
 
 
     public Tavolo(EnumTavoli tipoTavolo){
         this.tipoTavolo= tipoTavolo;
     }
-
+//TODO rivedere come modificare
     public void assegnaPosti(Prenotazione prenotazione){
         for (Integer i = 0; i < tipoTavolo.getPostiTavolo(); i++) {
             clientiOccupanti.add(prenotazione.getCliente().get(i));
             prenotazione.getCliente().remove(i);
         }
     }
-
+//TODO da rivedere
     public void svuotaTavolo(){
         clientiOccupanti.clear();
         System.out.println("il tavolo e stato liberato");
@@ -32,10 +31,6 @@ public class Tavolo {
     public Integer getPosti() {
         return tipoTavolo.getPostiTavolo();
     }
-
-
-
-
 
     public List<Cliente> getClientiOccupanti() {
         return clientiOccupanti;

@@ -1,5 +1,7 @@
 package Ristorante.foodAndDrink;
 
+import Ristorante.enums.MenuTypeEnum;
+
 /**
  * La classe che fa riferimento alla portata
  * @author Fabrizio Trupia , Alessandro Trupia , Nicola Boniello , Andrea Sciscioli
@@ -83,6 +85,7 @@ public class Portata {
     public void setPrice(Integer price) {
         this.price = price;
     }
+
     public MenuTypeEnum getTipoPortata() {
         return tipoPortata;
     }

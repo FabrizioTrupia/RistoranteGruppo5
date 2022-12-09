@@ -1,7 +1,7 @@
 package Ristorante.foodAndDrink.dishEntities;
 
 import Ristorante.foodAndDrink.Portata;
-import Ristorante.foodAndDrink.MenuTypeEnum;
+import Ristorante.enums.MenuTypeEnum;
 
 /**La classe che fa riferimento ai dessert del Ristorante.FoodAndDrink.Menu
  * @Author Andrea Sciscioli

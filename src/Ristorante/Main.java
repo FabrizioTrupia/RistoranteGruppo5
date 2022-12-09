@@ -3,12 +3,9 @@ package Ristorante;
 import Ristorante.consumatore.Cliente;
 import Ristorante.consumatore.Prenotazione;
 import Ristorante.consumatore.Tavolo;
+import Ristorante.enums.EnumTavoli;
+import Ristorante.enums.MenuTypeEnum;
 import Ristorante.foodAndDrink.*;
-import Ristorante.foodAndDrink.dishEntities.Antipasti;
-import Ristorante.foodAndDrink.dishEntities.Dessert;
-import Ristorante.foodAndDrink.dishEntities.PrimiPiatti;
-import Ristorante.foodAndDrink.dishEntities.SecondiPiatti;
-
 import Ristorante.foodAndDrink.dishEntities.*;
 
 import java.util.*;
