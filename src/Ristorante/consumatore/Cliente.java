@@ -19,24 +19,19 @@ public class Cliente {
      * gusto del cliente
      */
     private MenuTypeEnum gusti;
-//TODO rimuovere data prenotazione che dovrebbe essere in Prenotazione
-    private String dataPrenotazione;
-
 
     /**
      * metodo costruttore cliente
      * @param cognome --> cognome del cliente
      * @param gusti --> gusto del cliente
      */
-    public Cliente(String cognome, MenuTypeEnum gusti, String dataPrenotazione) {
-        this.dataPrenotazione = dataPrenotazione;
+    public Cliente(String cognome, MenuTypeEnum gusti) {
         this.cognome = cognome;
         this.gusti = gusti;
     }
-
     @Override
     public String toString() {
-        return "Prenotazione cliente : " + cognome + ". Data prenotazione : " + dataPrenotazione;
+        return "Prenotazione cliente : " + cognome;
     }
     public String getCognome() {
         return cognome;

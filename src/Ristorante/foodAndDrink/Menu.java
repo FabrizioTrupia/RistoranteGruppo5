@@ -35,14 +35,14 @@ public class Menu {
 
 
     /**
-     * Lista delle portateMenuVegano
+     * Lista delle portate Menu Vegano
      */
-    private List<Portata> listaPortata = new ArrayList<>();
+    private final List<Portata> listaPortata = new ArrayList<>();
 
 
     /**
      * Metodo costruttore classe Menu
-     * @param list
+     * @param list lista delle portate
      */
     public Menu(List<Portata> list) {
         this.listaMenu = list;
@@ -93,7 +93,7 @@ public class Menu {
 
     /**
      * un metodo per aggiungere la portata alla lista Menu classico
-     * @param portata
+     * @param portata l'oggetto portata
      */
     public void addPortata(Portata portata){
         listaPortata.add(portata);
@@ -114,7 +114,7 @@ public class Menu {
 
     /**
      * metodo che consiglia un piatto al cliente in base alle preferenze del cliente
-     * @param cliente
+     * @param cliente l'oggetto cliente
      */
     public void stampaPiattoInBaseAlCliente(Cliente cliente){
         System.out.println("Gentile " + cliente.getCognome()

@@ -1,41 +1,65 @@
 package Ristorante.consumatore;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
+
 /**
- * La classe che fa riferimento alle prenotazioni cliente
- * @author Fabrizio Trupia, Alessandro Trupia, Nicola Boniello, Andrea Sciscioli
- * @version 2.0
+ * La classe che fa riferimento alle prenotazioni del cliente
+ *
+ * @author Fabrizio Trupia, Alessandro Trupia, Nicola Boniello, Andrea Sciscioli, Alina Mustata
+ * @version 3.0
  */
-
-
 public class Prenotazione {
 
-    private List<Cliente> cliente;
-    //TODO numero di posti richiesti, nome cliente / oggetto Cliente, data/ora
+    private Integer postiRichiesti;
+    private Cliente cliente;
+    private LocalDateTime orarioPrenotazione;
 
-
-    public Prenotazione(List<Cliente> clienteList) {
-        this.cliente = clienteList;
+    /**
+     * Inizializza una nuova Prenotazione
+     *
+     * @param postiRichiesti     posti richiesti dal cliente
+     * @param cliente            il cliente che fa la prenotazione
+     * @param orarioPrenotazione orario della prenotazione
+     */
+    public Prenotazione(Cliente cliente, Integer postiRichiesti, LocalDateTime orarioPrenotazione) {
+        this.postiRichiesti = postiRichiesti;
+        this.cliente = cliente;
+        this.orarioPrenotazione = orarioPrenotazione;
+    }
+    public Integer getPostiRichiesti() {
+        return postiRichiesti;
     }
 
-    public List<Cliente> getCliente() {
+    public void setPostiRichiesti(Integer postiRichiesti) {
+        this.postiRichiesti = postiRichiesti;
+    }
+
+    public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(List<Cliente> cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
-//TODO da rivedere
-    public void aggiungerePrenotazioni(List<Cliente> clienteList) {
-        //Todo aggiungere un solo cliente
-        this.cliente.addAll(clienteList);
-        cliente.addAll(clienteList);
+
+    public LocalDateTime getOrarioPrenotazione() {
+        return orarioPrenotazione;
     }
 
-    public void stampaPrenotazioni() {
-        cliente.forEach(System.out::println);
+    public void setOrarioPrenotazione(LocalDateTime orarioPrenotazione) {
+        this.orarioPrenotazione = orarioPrenotazione;
     }
 
-
+    /**
+     * Stampa prenotazione
+     * @return una stringa con i dettagli della prenotazione
+     */
+    public String stampaPrenotazione() {
+        return "Prenotazione -" +
+                " postiRichiesti: " + postiRichiesti +
+                " cliente: " + cliente +
+                " orarioPrenotazione: " + orarioPrenotazione;
+    }
 }

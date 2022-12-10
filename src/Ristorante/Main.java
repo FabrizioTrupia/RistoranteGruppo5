@@ -2,12 +2,14 @@ package Ristorante;
 
 import Ristorante.consumatore.Cliente;
 import Ristorante.consumatore.Prenotazione;
+import Ristorante.consumatore.Sala;
 import Ristorante.consumatore.Tavolo;
 import Ristorante.enums.EnumTavoli;
 import Ristorante.enums.MenuTypeEnum;
 import Ristorante.foodAndDrink.*;
 import Ristorante.foodAndDrink.dishEntities.*;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 /**
@@ -133,9 +135,9 @@ public class Main {
 
 
         System.out.println("============SEZIONE CLIENTE============");
-        Cliente cliente = new Cliente("Rossi",  MenuTypeEnum.CLASSICO,"25 Dicembre 20:00");
-        Cliente cliente1 = new Cliente("De paolo", MenuTypeEnum.VEGANO,"25 Dicembre 21:00");
-        Cliente cliente2 = new Cliente("De luca", MenuTypeEnum.VEGETARIANO,"25 Dicembre 22:00");
+        Cliente cliente = new Cliente("Rossi",  MenuTypeEnum.CLASSICO);
+        Cliente cliente1 = new Cliente("De paolo", MenuTypeEnum.VEGANO);
+        Cliente cliente2 = new Cliente("De luca", MenuTypeEnum.VEGETARIANO);
 
 
         cliente.infoCliente();
@@ -159,16 +161,14 @@ public class Main {
 
 
 
-        Prenotazione prenotazione = new Prenotazione(clienteList);
-        prenotazione.aggiungerePrenotazioni(clienteList);
 
-        prenotazione.stampaPrenotazioni();
 
-        Tavolo tavolo1 = new Tavolo(EnumTavoli.MEDIO);
-        Tavolo tavolo2 = new Tavolo(EnumTavoli.MEDIO);
-        Tavolo tavolo3 = new Tavolo(EnumTavoli.GRANDE);
-        Tavolo tavolo4 = new Tavolo(EnumTavoli.PICCOLO);
-        Tavolo tavolo5 = new Tavolo(EnumTavoli.PICCOLO);
+        Tavolo tavolo1 = new Tavolo(EnumTavoli.MEDIO,1);
+        Tavolo tavolo2 = new Tavolo(EnumTavoli.MEDIO,2);
+        Tavolo tavolo3 = new Tavolo(EnumTavoli.GRANDE,3);
+        Tavolo tavolo4 = new Tavolo(EnumTavoli.PICCOLO,4);
+        Tavolo tavolo5 = new Tavolo(EnumTavoli.PICCOLO,5);
+
 
         List<Tavolo> listaTavoli= new ArrayList<>();
         listaTavoli.add(tavolo1);
@@ -177,10 +177,23 @@ public class Main {
         listaTavoli.add(tavolo4);
         listaTavoli.add(tavolo5);
 
+        Prenotazione prenotazione = new Prenotazione(cliente, 4,
+                LocalDateTime.of(2022,12,20, 20,00));
+        Prenotazione prenotazione1 = new Prenotazione(cliente1, 8,
+                LocalDateTime.of(2022,12,20, 20,00));
+        Prenotazione prenotazione2 = new Prenotazione(cliente2, 10,
+                LocalDateTime.of(2022,12,20, 20,00));
+
+        List<Prenotazione> listaPrenotazioni= new ArrayList<>();
+        listaPrenotazioni.add(prenotazione2);
+        listaPrenotazioni.add(prenotazione1);
+        listaPrenotazioni.add(prenotazione);
 
 
-        tavolo1.assegnaPosti(prenotazione);
-        System.out.println(tavolo1.getClientiOccupanti().toString());
+        Map<Tavolo, Prenotazione> mappa1 = new HashMap<>();
+        //Sala sala = new Sala(listaTavoli);
 
+      //lista prenotazioni
+        // aggiungono alla mappa tavolo, prenotazione
     }
 }
