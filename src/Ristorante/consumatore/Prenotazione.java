@@ -1,7 +1,6 @@
 package Ristorante.consumatore;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 
 /**
@@ -54,12 +53,11 @@ public class Prenotazione {
 
     /**
      * Stampa prenotazione
-     * @return una stringa con i dettagli della prenotazione
      */
-    public String stampaPrenotazione() {
-        return "Prenotazione -" +
+    public void stampaPrenotazione() {
+        System.out.println( "Prenotazione -" +
                 " postiRichiesti: " + postiRichiesti +
                 " cliente: " + cliente +
-                " orarioPrenotazione: " + orarioPrenotazione;
+                " orarioPrenotazione: " + orarioPrenotazione);
     }
 }

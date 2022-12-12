@@ -2,8 +2,7 @@ package Ristorante.consumatore;
 
 import Ristorante.enums.EnumTavoli;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,6 +11,7 @@ import java.util.List;
 public class Tavolo {
     private EnumTavoli tipoTavolo;
     private Integer numeroTavolo;
+    private final List<Prenotazione> listaPrenotazioni = new ArrayList<>();
 //lista prenotazioni
 
     /**
@@ -41,18 +41,24 @@ public class Tavolo {
         this.numeroTavolo = numeroTavolo;
     }
 
-/*
-    //TODO rivedere come modificare
-    public void assegnaPosti(Prenotazione prenotazione){
-        for (Integer i = 0; i < tipoTavolo.getPostiTavolo(); i++) {
-            clientiOccupanti.add(prenotazione.getCliente().get(i));
-            prenotazione.getCliente().remove(i);
+    /**
+     * Aggiungi prenotazione al tavolo
+     *
+     * @param prenotazione la prenotazione da aggiungere al tavolo
+     */
+    public void aggiungiPrenotazione(Prenotazione prenotazione){
+        listaPrenotazioni.add(prenotazione);
+    }
+
+    /**
+     * Stampa tavolo
+     * stampa i dettagli del tavolo e le sue prenotazioni.
+     */
+    public void stampaTavolo(){
+        System.out.println("Numero del tavolo: " + numeroTavolo +
+                " Tipo tavolo: " + tipoTavolo);
+        for(Prenotazione prenotazione : listaPrenotazioni){
+            prenotazione.stampaPrenotazione();
         }
     }
-//TODO da rivedere
-    public void svuotaTavolo(){
-        clientiOccupanti.clear();
-        System.out.println("il tavolo e stato liberato");
-    }*/
-
 }

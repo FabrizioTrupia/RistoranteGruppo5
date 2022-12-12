@@ -162,7 +162,7 @@ public class Main {
 
 
 
-
+//Gestione Tavoli e Prenotazioni
         Tavolo tavolo1 = new Tavolo(EnumTavoli.MEDIO,1);
         Tavolo tavolo2 = new Tavolo(EnumTavoli.MEDIO,2);
         Tavolo tavolo3 = new Tavolo(EnumTavoli.GRANDE,3);
@@ -177,23 +177,16 @@ public class Main {
         listaTavoli.add(tavolo4);
         listaTavoli.add(tavolo5);
 
-        Prenotazione prenotazione = new Prenotazione(cliente, 4,
+        Sala sala = new Sala("Ristorante Team 5", listaTavoli);
+
+        sala.prenotaTavolo(cliente, 4,
                 LocalDateTime.of(2022,12,20, 20,00));
-        Prenotazione prenotazione1 = new Prenotazione(cliente1, 8,
+        sala.prenotaTavolo(cliente1, 8,
                 LocalDateTime.of(2022,12,20, 20,00));
-        Prenotazione prenotazione2 = new Prenotazione(cliente2, 10,
+        sala.prenotaTavolo(cliente2, 10,
                 LocalDateTime.of(2022,12,20, 20,00));
 
-        List<Prenotazione> listaPrenotazioni= new ArrayList<>();
-        listaPrenotazioni.add(prenotazione2);
-        listaPrenotazioni.add(prenotazione1);
-        listaPrenotazioni.add(prenotazione);
+        sala.stampaSala();
 
-
-        Map<Tavolo, Prenotazione> mappa1 = new HashMap<>();
-        //Sala sala = new Sala(listaTavoli);
-
-      //lista prenotazioni
-        // aggiungono alla mappa tavolo, prenotazione
     }
 }
