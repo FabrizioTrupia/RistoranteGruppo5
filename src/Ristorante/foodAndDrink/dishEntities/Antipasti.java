@@ -1,7 +1,7 @@
 package Ristorante.foodAndDrink.dishEntities;
 
 import Ristorante.foodAndDrink.Portata;
-import Ristorante.foodAndDrink.MenuTypeEnum;
+import Ristorante.enums.MenuTypeEnum;
 
 /**
  * La classe che fa riferimento agli antipasti che estende la classe Ristorante.FoodAndDrink.Portata

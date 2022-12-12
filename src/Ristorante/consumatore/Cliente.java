@@ -1,6 +1,6 @@
 package Ristorante.consumatore;
 
-import Ristorante.foodAndDrink.MenuTypeEnum;
+import Ristorante.enums.MenuTypeEnum;
 
 /**
  * La classe che fa riferimento ai clienti
@@ -20,33 +20,19 @@ public class Cliente {
      */
     private MenuTypeEnum gusti;
 
-    private String dataPrenotazione;
-
-
     /**
      * metodo costruttore cliente
      * @param cognome --> cognome del cliente
      * @param gusti --> gusto del cliente
      */
-    public Cliente(String cognome, MenuTypeEnum gusti, String dataPrenotazione) {
-        this.dataPrenotazione = dataPrenotazione;
+    public Cliente(String cognome, MenuTypeEnum gusti) {
         this.cognome = cognome;
         this.gusti = gusti;
     }
-
     @Override
     public String toString() {
-        return "Prenotazione cliente : " + cognome + ". Data prenotazione : " + dataPrenotazione;
+        return "Prenotazione cliente : " + cognome;
     }
-
-    /**
-     * Metodo info cliente
-     */
-    public void infoCliente() {
-        System.out.println("Cliente: " + getCognome() + " Gusto cliente: " + getGusti());
-    }
-
-
     public String getCognome() {
         return cognome;
     }
@@ -55,7 +41,6 @@ public class Cliente {
         this.cognome = cognome;
     }
 
-
     public MenuTypeEnum getGusti() {
         return gusti;
     }
@@ -63,4 +48,14 @@ public class Cliente {
     public void setGusti(MenuTypeEnum gusti) {
         this.gusti = gusti;
     }
+
+    /**
+     * Metodo info cliente
+     */
+    public void infoCliente() {
+        System.out.println("Cliente: " + this.cognome + " Gusto cliente: " + this.gusti);
+    }
+
+
+
 }

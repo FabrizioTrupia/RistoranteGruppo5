@@ -1,46 +1,64 @@
 package Ristorante.consumatore;
 
+import Ristorante.enums.EnumTavoli;
+
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Tavolo.
+ */
 public class Tavolo {
+    private EnumTavoli tipoTavolo;
+    private Integer numeroTavolo;
+    private final List<Prenotazione> listaPrenotazioni = new ArrayList<>();
+//lista prenotazioni
 
-    private Integer posti;
-
-    private List<Cliente> clientiOccupanti = new ArrayList<>();
-
-    public Integer getPosti() {
-        return posti;
+    /**
+     * Inizializza un Tavolo
+     *
+     * @param tipoTavolo   tipo del tavolo (grande, medio, piccolo)
+     * @param numeroTavolo numero del tavolo (identificativo)
+     */
+    public Tavolo(EnumTavoli tipoTavolo, Integer numeroTavolo){
+        this.tipoTavolo= tipoTavolo;
+        this.numeroTavolo = numeroTavolo;
     }
 
-    public void setPosti(Integer posti) {
-        this.posti = posti;
+    public EnumTavoli getTipoTavolo() {
+        return tipoTavolo;
     }
 
-    public List<Cliente> getClientiOccupanti() {
-        return clientiOccupanti;
+    public void setTipoTavolo(EnumTavoli tipoTavolo) {
+        this.tipoTavolo = tipoTavolo;
     }
 
-    public void setClientiOccupanti(List<Cliente> clientiOccupanti) {
-        this.clientiOccupanti = clientiOccupanti;
+    public Integer getNumeroTavolo() {
+        return numeroTavolo;
     }
 
-
-    public Tavolo(Integer posti){
-        this.posti= posti;
+    public void setNumeroTavolo(Integer numeroTavolo) {
+        this.numeroTavolo = numeroTavolo;
     }
 
-    public void assegnaPosti(Prenotazione prenotazione){
-        for (Integer i = 0; i < posti; i++) {
-            clientiOccupanti.add(prenotazione.getCliente().get(i));
-            prenotazione.getCliente().remove(i);
+    /**
+     * Aggiungi prenotazione al tavolo
+     *
+     * @param prenotazione la prenotazione da aggiungere al tavolo
+     */
+    public void aggiungiPrenotazione(Prenotazione prenotazione){
+        listaPrenotazioni.add(prenotazione);
+    }
+
+    /**
+     * Stampa tavolo
+     * stampa i dettagli del tavolo e le sue prenotazioni.
+     */
+    public void stampaTavolo(){
+        System.out.println("Numero del tavolo: " + numeroTavolo +
+                " Tipo tavolo: " + tipoTavolo);
+        for(Prenotazione prenotazione : listaPrenotazioni){
+            prenotazione.stampaPrenotazione();
         }
     }
-
-    public void svuotaTavolo(){
-        clientiOccupanti.clear();
-        System.out.println("il tavolo e stato liberato");
-    }
-
-
 }
