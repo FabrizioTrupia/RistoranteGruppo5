@@ -1,6 +1,8 @@
 package Ristorante.consumatore;
 
 
+import Ristorante.enums.EnumTavoli;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -33,13 +35,14 @@ public class Sala {
      * Prenota tavolo
      *
      * @param cliente            il cliente che fa la prenotazione
-     * @param postiRichiesti     i posti richiesti dal cliente
+     * @param tipoTavoloRichiesto     i posti richiesti dal cliente
      * @param orarioPrenotazione l'orario della prenotazione
      */
-    public void prenotaTavolo(Cliente cliente, Integer postiRichiesti, LocalDateTime orarioPrenotazione){
+    //TODO gestire la duplicazione prenotazioni sullo stesso tavolo
+    public void prenotaTavolo(Cliente cliente, EnumTavoli tipoTavoloRichiesto, LocalDateTime orarioPrenotazione){
         for(Tavolo tavolo : listaTavoli){
-            if(tavolo.getTipoTavolo().getPostiTavolo() >= postiRichiesti){
-                tavolo.aggiungiPrenotazione(new Prenotazione(cliente, postiRichiesti, orarioPrenotazione));
+            if(tavolo.getTipoTavolo() == tipoTavoloRichiesto){
+                tavolo.aggiungiPrenotazione(new Prenotazione(cliente, tipoTavoloRichiesto, orarioPrenotazione));
                 return;
             }
         }

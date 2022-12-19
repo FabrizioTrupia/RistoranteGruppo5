@@ -179,11 +179,11 @@ public class Main {
 
         Sala sala = new Sala("Ristorante Team 5", listaTavoli);
 
-        sala.prenotaTavolo(cliente, 4,
+        sala.prenotaTavolo(cliente, EnumTavoli.PICCOLO,
                 LocalDateTime.of(2022,12,20, 20,00));
-        sala.prenotaTavolo(cliente1, 8,
+        sala.prenotaTavolo(cliente1, EnumTavoli.GRANDE,
                 LocalDateTime.of(2022,12,20, 20,00));
-        sala.prenotaTavolo(cliente2, 10,
+        sala.prenotaTavolo(cliente2, EnumTavoli.PICCOLO,
                 LocalDateTime.of(2022,12,20, 20,00));
 
         sala.stampaSala();

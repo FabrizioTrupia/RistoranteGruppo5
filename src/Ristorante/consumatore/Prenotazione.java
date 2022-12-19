@@ -1,5 +1,7 @@
 package Ristorante.consumatore;
 
+import Ristorante.enums.EnumTavoli;
+
 import java.time.LocalDateTime;
 
 
@@ -11,28 +13,30 @@ import java.time.LocalDateTime;
  */
 public class Prenotazione {
 
-    private Integer postiRichiesti;
+    private EnumTavoli misuraTavolo;
     private Cliente cliente;
     private LocalDateTime orarioPrenotazione;
 
     /**
      * Inizializza una nuova Prenotazione
      *
-     * @param postiRichiesti     posti richiesti dal cliente
+     * @param misuraTavolo     posti richiesti dal cliente sotto forma di misura tavolo(mini, piccolo, famiglia, ecc)
      * @param cliente            il cliente che fa la prenotazione
      * @param orarioPrenotazione orario della prenotazione
      */
-    public Prenotazione(Cliente cliente, Integer postiRichiesti, LocalDateTime orarioPrenotazione) {
-        this.postiRichiesti = postiRichiesti;
+
+    public Prenotazione(Cliente cliente, EnumTavoli misuraTavolo, LocalDateTime orarioPrenotazione) {
+        this.misuraTavolo = misuraTavolo;
         this.cliente = cliente;
         this.orarioPrenotazione = orarioPrenotazione;
     }
-    public Integer getPostiRichiesti() {
-        return postiRichiesti;
+
+    public EnumTavoli getMisuraTavolo() {
+        return misuraTavolo;
     }
 
-    public void setPostiRichiesti(Integer postiRichiesti) {
-        this.postiRichiesti = postiRichiesti;
+    public void setMisuraTavolo(EnumTavoli misuraTavolo) {
+        this.misuraTavolo = misuraTavolo;
     }
 
     public Cliente getCliente() {
@@ -56,8 +60,8 @@ public class Prenotazione {
      */
     public void stampaPrenotazione() {
         System.out.println( "Prenotazione -" +
-                " postiRichiesti: " + postiRichiesti +
+                " misura tavolo: " + misuraTavolo +
                 " cliente: " + cliente +
-                " orarioPrenotazione: " + orarioPrenotazione);
+                " orario prenotazione: " + orarioPrenotazione);
     }
 }
