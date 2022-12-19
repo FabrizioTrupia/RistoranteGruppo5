@@ -2,10 +2,12 @@ package Ristorante.enums;
 
 public enum EnumTavoli {
     GRANDE(8),
+    FAMIGLIA(6),
     MEDIO(4),
-    PICCOLO(2);
+    PICCOLO(2),
+    MINI(1);
 
-    Integer postiTavolo;
+    private Integer postiTavolo;
 
 
     EnumTavoli(Integer postiTavolo){
